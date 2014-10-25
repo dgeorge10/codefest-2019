@@ -6,7 +6,6 @@ from .conf import config
 from . import settings
 from . import util
 
-from six.moves import urllib
 from six.moves import input
 
 import requests
