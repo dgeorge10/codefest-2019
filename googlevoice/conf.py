@@ -18,7 +18,7 @@ class Config(ConfigParser):
                 return
             f.write(settings.DEFAULT_CONFIG)
             f.close()
-            
+
         ConfigParser.__init__(self)
         try:
             self.read([self.fname])
@@ -30,7 +30,7 @@ class Config(ConfigParser):
             return ConfigParser.get(self, section, option).strip() or None
         except NoOptionError:
             return
-        
+
     def set(self, option, value, section='gvoice'):
         return ConfigParser.set(self, section, option, value)
 
@@ -39,17 +39,17 @@ class Config(ConfigParser):
             return int(self.get('phoneType'))
         except TypeError:
             return
-        
+
     def save(self):
         f = open(self.fname, 'w')
         self.write(f)
         f.close()
-        
+
 
     phoneType = property(phoneType)
     forwardingNumber = property(lambda self: self.get('forwardingNumber'))
     email = property(lambda self: self.get('email','auth'))
     password = property(lambda self: self.get('password','auth'))
     secret = property(lambda self: self.get('secret'))
-    
+
 config = Config()
