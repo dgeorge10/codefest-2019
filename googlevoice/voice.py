@@ -227,7 +227,10 @@ class Voice(object):
         """
         Return XMLParser instance generated from given page
         """
-        return util.XMLParser(self, page, lambda: self.__do_special_page('XML_%s' % page.upper(), data, headers).read())
+        def getter():
+            page_name = 'XML_%s' % page.upper()
+            return self.__do_special_page(page_name, data, headers).text
+        return util.XMLParser(self, page, getter)
 
     def __messages_post(self, page, *msgs, **kwargs):
         """
