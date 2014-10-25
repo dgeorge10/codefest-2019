@@ -1,4 +1,5 @@
 import re
+import logging
 
 from .conf import config
 from . import settings
@@ -9,12 +10,9 @@ from six.moves import urllib
 import requests
 
 if settings.DEBUG:
-    import logging
-    logging.basicConfig()
-    log = logging.getLogger('PyGoogleVoice')
-    log.setLevel(logging.DEBUG)
-else:
-    log = None
+    logging.basicConfig(level=logging.DEBUG)
+
+log = logging.getLogger(__name__)
 
 class Voice(object):
     """
@@ -198,8 +196,7 @@ class Voice(object):
             data = urllib.parse.urlencode(data)
         headers.update({'User-Agent': 'PyGoogleVoice/0.5'})
         url = getattr(settings, page)
-        if log:
-            log.debug('%s?%s - %s' % (url[22:], data or '', headers))
+        log.debug('%s?%s - %s' % (url[22:], data or '', headers))
         if page in ('DOWNLOAD','XML_SEARCH'):
             url = url + data
             data = None
