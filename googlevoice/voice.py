@@ -5,7 +5,6 @@ from . import settings
 from . import util
 
 from six.moves import urllib
-from six.moves import http_cookiejar
 
 import requests
 
@@ -23,10 +22,7 @@ class Voice(object):
     Handles login/logout and most of the baser HTTP methods
     """
     def __init__(self):
-        jar = http_cookiejar.CookieJar()
-        processor = urllib.request.HTTPCookieProcessor(jar)
-        opener = urllib.request.build_opener(processor)
-        urllib.request.install_opener(opener)
+        self.session = requests.Session()
 
         for name in settings.FEEDS:
             setattr(self, name, self.__get_xml_page(name))
@@ -41,7 +37,7 @@ class Voice(object):
         if hasattr(self, '_special') and getattr(self, '_special'):
             return self._special
         pattern = re.compile(r"('_rnr_se':) '(.+)'")
-        resp = requests.get(settings.INBOX).text
+        resp = self.session.get(settings.INBOX).text
         try:
             sp = pattern.search(resp).group(2)
         except AttributeError:
@@ -209,7 +205,7 @@ class Voice(object):
             data = None
         if data:
             headers.update({'Content-type': 'application/x-www-form-urlencoded;charset=utf-8'})
-        return requests.get(url, data=data, headers=headers)
+        return self.session.get(url, data=data, headers=headers)
 
     def __validate_special_page(self, page, data={}, **kwargs):
         """
