@@ -63,8 +63,9 @@ class Voice(object):
 
         content = self.__do_page('login').text
         # holy hackjob
-        matcher = re.compile(r"name=\"GALX\".*?value=\"(.+)\"", re.DOTALL)
+        matcher = re.compile(r"name=\"GALX\".*?value=\"(.+?)\"", re.DOTALL)
         galx = matcher.search(content).group(1)
+        assert len(galx) < 20
         self.__do_page('login', {'Email': email, 'Passwd': passwd, 'GALX': galx})
 
         del email, passwd
@@ -196,7 +197,9 @@ class Voice(object):
             data = urllib.parse.urlencode(data)
             url = url + data
             data = None
-        return self.session.get(url, data=data, headers=headers)
+        method = 'POST' if data else 'GET'
+        resp = self.session.request(method, url, data=data, headers=headers)
+        return resp
 
     def __validate_special_page(self, page, data={}, **kwargs):
         """
