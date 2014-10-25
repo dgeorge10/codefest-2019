@@ -7,6 +7,8 @@ from . import util
 from six.moves import urllib
 from six.moves import http_cookiejar
 
+import requests
+
 if settings.DEBUG:
     import logging
     logging.basicConfig()
@@ -73,7 +75,7 @@ class Voice(object):
             from getpass import getpass
             passwd = getpass()
 
-        content = self.__do_page('login').read()
+        content = self.__do_page('login').text
         # holy hackjob
         galx = re.search(r"name=\"GALX\"\s+value=\"(.+)\"", content).group(1)
         self.__do_page('login', {'Email': email, 'Passwd': passwd, 'GALX': galx})
@@ -175,7 +177,7 @@ class Voice(object):
             raise util.DownloadError
         fn = path.join(adir, '%s.mp3' % msg)
         fo = open(fn, 'wb')
-        fo.write(response.read())
+        fo.write(response.raw_content)
         fo.close()
         return fn
 
@@ -196,7 +198,8 @@ class Voice(object):
 
     def __do_page(self, page, data=None, headers=None):
         """
-        Loads a page out of the settings and pass it on to urllib Request
+        Loads a page out of the settings and request it using requests.
+        Return Response.
         """
         headers = headers or {}
         page = page.upper()
@@ -211,8 +214,7 @@ class Voice(object):
             data = None
         if data:
             headers.update({'Content-type': 'application/x-www-form-urlencoded;charset=utf-8'})
-        req = urllib.request.Request(url, data, headers)
-        return urllib.request.urlopen(req)
+        return requests.get(url, data=data, headers=headers)
 
     def __validate_special_page(self, page, data={}, **kwargs):
         """
