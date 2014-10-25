@@ -1,12 +1,10 @@
-try:
-    from configparser import ConfigParser, NoOptionError
-except ImportError:
-    from ConfigParser import ConfigParser, NoOptionError
 import os
+
+from six.moves import configparser
+
 from . import settings
 
-
-class Config(ConfigParser):
+class Config(configparser.ConfigParser):
     """
     ``ConfigParser`` subclass that looks into your home folder for a file named
     ``.gvoice`` and parses configuration data from it.
@@ -22,7 +20,7 @@ class Config(ConfigParser):
             f.write(settings.DEFAULT_CONFIG)
             f.close()
 
-        ConfigParser.__init__(self)
+        super(Config, self).__init__()
         try:
             self.read([self.fname])
         except IOError:
@@ -30,12 +28,12 @@ class Config(ConfigParser):
 
     def get(self, option, section='gvoice'):
         try:
-            return ConfigParser.get(self, section, option).strip() or None
-        except NoOptionError:
+            return super(Config, self).get(section, option).strip() or None
+        except configparser.NoOptionError:
             return
 
     def set(self, option, value, section='gvoice'):
-        return ConfigParser.set(self, section, option, value)
+        return super(Config, self).set(section, option, value)
 
     def phoneType(self):
         try:
@@ -47,7 +45,6 @@ class Config(ConfigParser):
         f = open(self.fname, 'w')
         self.write(f)
         f.close()
-
 
     phoneType = property(phoneType)
     forwardingNumber = property(lambda self: self.get('forwardingNumber'))
