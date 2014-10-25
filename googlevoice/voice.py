@@ -77,7 +77,8 @@ class Voice(object):
 
         content = self.__do_page('login').text
         # holy hackjob
-        galx = re.search(r"name=\"GALX\"\s+value=\"(.+)\"", content).group(1)
+        matcher = re.compile(r"name=\"GALX\".*?value=\"(.+)\"", re.DOTALL)
+        galx = matcher.search(content).group(1)
         self.__do_page('login', {'Email': email, 'Passwd': passwd, 'GALX': galx})
 
         del email, passwd
