@@ -1,5 +1,6 @@
 import re
 import logging
+import getpass
 
 from .conf import config
 from . import settings
@@ -52,16 +53,8 @@ class Voice(object):
         if hasattr(self, '_special') and getattr(self, '_special'):
             return self
 
-        if email is None:
-            email = config.email
-        if email is None:
-            email = input('Email address: ')
-
-        if passwd is None:
-            passwd = config.password
-        if passwd is None:
-            from getpass import getpass
-            passwd = getpass()
+        email = email or config.email or input('Email address: ')
+        passwd = passwd or config.password or getpass.getpass()
 
         content = self.__do_page('login').text
         # holy hackjob
