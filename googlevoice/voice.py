@@ -159,13 +159,16 @@ class Voice(object):
         assert util.is_sha1(msg), 'Message id not a SHA1 hash'
         if adir is None:
             adir = getcwd()
+        url = self.__resolve_page('download')
+        url += msg
         try:
-            response = self.__do_page('download', msg)
+            resp = self.__do_url(url)
+            resp.raise_for_status()
         except:
             raise util.DownloadError
         fn = path.join(adir, '%s.mp3' % msg)
         fo = open(fn, 'wb')
-        fo.write(response.raw_content)
+        fo.write(resp.raw_content)
         fo.close()
         return fn
 
@@ -184,19 +187,19 @@ class Voice(object):
     # Helper methods
     ######################
 
+    def __resolve_page(self, page):
+        return getattr(settings, page.upper())
+
     def __do_page(self, page, data=None, headers=None):
         """
         Loads a page out of the settings and request it using requests.
         Return Response.
         """
-        page = page.upper()
-        url = getattr(settings, page)
+        return self.__do_url(self.__resolve_page(page), data, headers)
+
+    def __do_url(self, url, data=None, headers=None):
         log.debug('url is %s', url)
         log.debug('data is %s', data)
-        if page in ('DOWNLOAD',):
-            data = urllib.parse.urlencode(data)
-            url = url + data
-            data = None
         method = 'POST' if data else 'GET'
         resp = self.session.request(method, url, data=data, headers=headers)
         return resp
