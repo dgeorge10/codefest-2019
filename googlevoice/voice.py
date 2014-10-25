@@ -1,6 +1,6 @@
-from conf import config
-from util import *
-import settings
+from .conf import config
+from .util import *
+from . import settings
 import os
 
 if settings.DEBUG:
