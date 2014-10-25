@@ -194,10 +194,11 @@ class Voice(object):
     # Helper methods
     ######################
 
-    def __do_page(self, page, data=None, headers={}):
+    def __do_page(self, page, data=None, headers=None):
         """
         Loads a page out of the settings and pass it on to urllib Request
         """
+        headers = headers or {}
         page = page.upper()
         if isinstance(data, dict) or isinstance(data, tuple):
             data = urllib.parse.urlencode(data)
