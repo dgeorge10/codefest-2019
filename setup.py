@@ -4,7 +4,7 @@ import setuptools
 README = """Python Google Voice
 ====================
 
-Joe McCall & Justin Quick
+Based on "pygooglevoice" by Joe McCall & Justin Quick
 
 Exposing the Google Voice "API" to the Python language
 -------------------------------------------------------
@@ -17,12 +17,12 @@ Full documentation is available up at http://sphinxdoc.github.com/pygooglevoice/
 """
 
 params = dict(
-    name = "pygooglevoice",
-    version = '0.5',
-    url = 'http://code.google.com/p/pygooglevoice',
-    author = 'Justin Quick and Joe McCall',
-    author_email='justquick@gmail.com, joe@mcc4ll.us',
-    description = 'Python 2/3 Interface for Google Voice',
+    name = "googlevoice",
+    version = '1.0',
+    url = 'https://bitbucket.org/jaraco/googlevoice',
+    author = 'Jason R. Coombs',
+    author_email='jaraco@jaraco.com',
+    description = 'Python Interface for Google Voice',
     long_description = README,
     packages = ['googlevoice'],
     scripts = ['bin/gvoice','bin/asterisk-gvoice-setup', 'bin/gvi'],
