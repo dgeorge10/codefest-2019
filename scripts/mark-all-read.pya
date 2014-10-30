@@ -1,0 +1,16 @@
+import googlevoice.util
+import keyring
+
+voice = googlevoice.Voice()
+username = 'jaraco@jaraco.com'
+password = keyring.get_password('Google', username)
+voice.login(username, password)
+
+while True:
+	folder = voice.search('is:unread')
+	if folder.totalSize <= 0:
+		break
+	util.print_(folder.totalSize)
+	for message in folder.messages:
+		util.print_(message)
+		message.mark(1)
