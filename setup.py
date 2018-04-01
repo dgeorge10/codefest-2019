@@ -18,7 +18,7 @@ Full documentation is available up at http://sphinxdoc.github.com/pygooglevoice/
 
 setup_params = dict(
     name = "googlevoice",
-    use_hg_version=True,
+    use_scm_version=True,
     url = 'https://bitbucket.org/jaraco/googlevoice',
     author = 'Jason R. Coombs',
     author_email='jaraco@jaraco.com',
@@ -27,7 +27,7 @@ setup_params = dict(
     packages = ['googlevoice'],
     scripts = ['bin/gvoice','bin/asterisk-gvoice-setup', 'bin/gvi'],
     install_requires=['six', 'requests'],
-    setup_requires=['hgtools'],
+    setup_requires=['setuptools_scm'],
 )
 
 if __name__ == '__main__':
