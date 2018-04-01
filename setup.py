@@ -19,7 +19,7 @@ Full documentation is available up at http://sphinxdoc.github.com/pygooglevoice/
 setup_params = dict(
     name = "googlevoice",
     use_scm_version=True,
-    url = 'https://bitbucket.org/jaraco/googlevoice',
+    url = 'https://github.com/jaraco/pygooglevoice/tree/fork-googlevoice',
     author = 'Jason R. Coombs',
     author_email='jaraco@jaraco.com',
     description = 'Python Interface for Google Voice',
