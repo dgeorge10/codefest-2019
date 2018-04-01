@@ -17,15 +17,15 @@ Full documentation is available up at http://sphinxdoc.github.com/pygooglevoice/
 """
 
 setup_params = dict(
-    name = "googlevoice",
+    name="googlevoice",
     use_scm_version=True,
-    url = 'https://github.com/jaraco/pygooglevoice/tree/fork-googlevoice',
-    author = 'Jason R. Coombs',
+    url='https://github.com/jaraco/pygooglevoice/tree/fork-googlevoice',
+    author='Jason R. Coombs',
     author_email='jaraco@jaraco.com',
-    description = 'Python Interface for Google Voice',
-    long_description = README,
-    packages = ['googlevoice'],
-    scripts = ['bin/gvoice','bin/asterisk-gvoice-setup', 'bin/gvi'],
+    description='Python Interface for Google Voice',
+    long_description=README,
+    packages=['googlevoice'],
+    scripts=['bin/gvoice', 'bin/asterisk-gvoice-setup', 'bin/gvi'],
     install_requires=['six', 'requests'],
     setup_requires=['setuptools_scm'],
 )
