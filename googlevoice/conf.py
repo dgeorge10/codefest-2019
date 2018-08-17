@@ -1,8 +1,10 @@
 import os
 
+import six
 from six.moves import configparser
 
 from . import settings
+
 
 class Config(configparser.ConfigParser):
     """
@@ -20,7 +22,11 @@ class Config(configparser.ConfigParser):
             f.write(settings.DEFAULT_CONFIG)
             f.close()
 
-        super(Config, self).__init__()
+        (
+            super(Config).__init__()
+            if six.PY3 else
+            configparser.ConfigParser.__init__(self)
+        )
         try:
             self.read([self.fname])
         except IOError:
@@ -28,12 +34,20 @@ class Config(configparser.ConfigParser):
 
     def get(self, option, section='gvoice'):
         try:
-            return super(Config, self).get(section, option).strip() or None
+            return (
+                super(Config, self).get(section, option)
+                if six.PY3 else
+                configparser.ConfigParser.get(self, section, option).strip()
+            ) or None
         except configparser.NoOptionError:
             return
 
     def set(self, option, value, section='gvoice'):
-        return super(Config, self).set(section, option, value)
+        return (
+            super(Config, self).set(section, option, value)
+            if six.PY3 else
+            configparser.ConfigParser.set(self, section, option, value)
+        )
 
     def phoneType(self):
         try:
