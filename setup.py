@@ -9,7 +9,6 @@ params = dict(
     author_email='jaraco@jaraco.com',
     description='Python Interface for Google Voice',
     packages=['googlevoice'],
-    scripts=['bin/gvoice', 'bin/asterisk-gvoice-setup', 'bin/gvi'],
     install_requires=['six', 'requests'],
 )
 
