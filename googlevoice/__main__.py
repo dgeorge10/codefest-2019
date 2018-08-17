@@ -47,13 +47,14 @@ parser.add_option(
     "-b", "--batch", dest='batch', default=False, action="store_true",
     help='Batch operations, asking for no interactive input')
 
-def login(email=options.email, passwd=options.passwd, batch=options.batch):
+
+def login(email, passwd, batch):
     """
     Login Voice instance based on options and interactivity
     """
     global voice
     try:
-        voice.login(options.email,options.passwd)
+        voice.login(email, passwd)
     except LoginError:
         if batch:
             print_('Login failed.')
@@ -63,22 +64,24 @@ def login(email=options.email, passwd=options.passwd, batch=options.batch):
         else:
             exit(0)
 
+
 def logout():
     global voice
     print_('Logging out of voice...')
     voice.logout()
 
+
 def pprint_folder(name):
     folder = getattr(voice, name)()
     print_(folder)
-    pprint(folder.messages,indent=4)
+    pprint(folder.messages, indent=4)
 
 
 def main():
     options, args = parser.parse_args()
 
     try:
-        action,args = args[0],args[1:]
+        action, args = args[0], args[1:]
     except IndexError:
         action = 'interactive'
 
@@ -97,47 +100,68 @@ def main():
                 action = input('gvoice> ').lower().strip()
             except (EOFError, KeyboardInterrupt):
                 exit(0)
-            if not action: continue
-            elif action in ('q','quit','exit'): break
-            elif action in ('login','li'): login()
-            elif action in ('logout','lo'): voice.logout()
-            elif action in ('call','c'):
+            if not action:
+                continue
+            elif action in ('q', 'quit', 'exit'):
+                break
+            elif action in ('login', 'li'):
+                login()
+            elif action in ('logout', 'lo'):
+                voice.logout()
+            elif action in ('call', 'c'):
                 voice.call(
                     input('Outgoing number: '),
                     input('Forwarding number [optional]: ') or None,
-                    int(input('Phone type [1-Home, 2-Mobile, 3-Work, 7-Gizmo]:') or 2)
+                    int(
+                        input(
+                            'Phone type [1-Home, 2-Mobile, 3-Work, 7-Gizmo]:'
+                        ) or 2)
                 )
                 print_('Calling...')
-            elif action in ('cancelcall','cc'): voice.cancel()
-            elif action in ('sendsms','s'):
+            elif action in ('cancelcall', 'cc'):
+                voice.cancel()
+            elif action in ('sendsms', 's'):
                 voice.send_sms(input('Phone number: '), input('Message: '))
                 print_('Message Sent')
-            elif action in ('search','se'):
-                se=voice.search(input('Search query: '))
+            elif action in ('search', 'se'):
+                se = voice.search(input('Search query: '))
                 print_(se)
                 pprint(se.messages)
-            elif action in ('download','d'):
-                print_('MP3 downloaded to %s' % voice.download(input('Message sha1: ')))
-            elif action in ('help','h','?'): print_(parser.usage)
-            elif action in ('trash','t'): pprint_folder('trash')
-            elif action in ('spam','sp'): pprint_folder('spam')
-            elif action in ('inbox','i'): pprint_folder('inbox')
-            elif action in ('voicemail','v'): pprint_folder('voicemail')
-            elif action in ('all','a'): pprint_folder('all')
-            elif action in ('starred','st'): pprint_folder('starred')
-            elif action in ('missed','m'): pprint_folder('missed')
-            elif action in ('recieved','re'): pprint_folder('recieved')
-            elif action in ('recorded','r'): pprint_folder('recorded')
-            elif action in ('sms','sm'): pprint_folder('sms')
+            elif action in ('download', 'd'):
+                print_(
+                    'MP3 downloaded to %s'
+                    % voice.download(input('Message sha1: ')))
+            elif action in ('help', 'h', '?'):
+                print_(parser.usage)
+            elif action in ('trash', 't'):
+                pprint_folder('trash')
+            elif action in ('spam', 'sp'):
+                pprint_folder('spam')
+            elif action in ('inbox', 'i'):
+                pprint_folder('inbox')
+            elif action in ('voicemail', 'v'):
+                pprint_folder('voicemail')
+            elif action in ('all', 'a'):
+                pprint_folder('all')
+            elif action in ('starred', 'st'):
+                pprint_folder('starred')
+            elif action in ('missed', 'm'):
+                pprint_folder('missed')
+            elif action in ('recieved', 're'):
+                pprint_folder('recieved')
+            elif action in ('recorded', 'r'):
+                pprint_folder('recorded')
+            elif action in ('sms', 'sm'):
+                pprint_folder('sms')
     else:
         if action == 'send_sms':
             try:
-                num,args = args[0],args[1:]
-            except:
+                num, args = args[0], args[1:]
+            except Exception:
                 print_('Please provide a message')
                 exit(0)
             args = (num, ' '.join(args))
-        getattr(voice,action)(*args)
+        getattr(voice, action)(*args)
 
 
 __name__ == '__main__' and main()

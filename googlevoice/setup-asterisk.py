@@ -16,8 +16,9 @@ def main():
     By using this script, you agree to assume ALL RISK.
     NO WARRANTY, EXPRESS OR IMPLIED, OF ANY KIND IS PROVIDED.
 
-    If you make a typo while entering values below, press Ctrl-C and start over.
-    Before starting, make sure you have removed any original [custom-gv] context
+    If you make a typo while entering values below, press
+    Ctrl-C and start over. Before starting, make sure you
+    have removed any original [custom-gv] context.
     """)
 
     conf_default = '/etc/asterisk/extensions_custom.conf'
@@ -29,18 +30,19 @@ def main():
 
     print_("""
     Your Google Voice entries are stored in %s
-    Edit that file and reload your Asterisk dialplan if you make future changes.
+    Edit that file and reload your Asterisk dialplan if you
+    make future changes.
     """ % conf)
 
     settings = {
         'config': conf,
-        'gvnum': input("10-digit Google Voice phone number (e.g. 9871234567): "),
+        'gvnum': input(
+            "10-digit Google Voice phone number (e.g. 9871234567): "),
         'acctname': input("Google Voice email address: "),
         'acctpass': getpass("Google Voice password: "),
         'ringback': input("11-digit Ring Back DID (e.g. 16781234567): "),
         'callpark': input("Parking Lot Magic Number: "),
     }
-
 
     input("""
     We are now ready to begin the installation.
@@ -59,7 +61,7 @@ def main():
     Installing Google Voice support for your PBX. One moment please...
     """)
 
-    content = """
+    content = r"""
     [custom-gv]
     exten => _X.,1,Wait(1)
     exten => _X.,n,Set(ACCTNAME=%(acctname)s)
@@ -67,7 +69,8 @@ def main():
     exten => _X.,n,Set(RINGBACK=%(ringback)s)
     exten => _X.,n,Set(CALLPARK=%(callpark)s)
     exten => _X.,n,Playback(pls-wait-connect-call)
-    exten => _X.,n,System(gvoice -b -e \${ACCTNAME} -p \${ACCTPASS} call \${EXTEN} \${RINGBACK})
+    exten => _X.,n,System(gvoice -b -e \${ACCTNAME} -p \
+\${ACCTPASS} call \${EXTEN} \${RINGBACK})
     exten => _X.,n,Set(PARKINGEXTEN=\${CALLPARK})
     exten => _X.,n,Park()
     exten => _X.,n,ParkAndAnnounce(pbx-transfer:PARKED|45|Console/dsp)
@@ -94,7 +97,8 @@ def main():
     print_("""
     Installation script is finished. Do NOT run it again on this system!
 
-    You can now reload your Asterisk dialplan configuration with the following command
+    You can now reload your Asterisk dialplan configuration with
+    the following command:
 
         asterisk -rx "dialplan reload"
 
@@ -102,5 +106,6 @@ def main():
 
     http://nerdvittles.com/?p=635
     """)
+
 
 __name__ == '__main__' and main()
