@@ -2,6 +2,8 @@
 Googlevoice interactive application. Invoke with python -m googlevoice.
 """
 
+from __future__ import print_function
+
 from sys import exit
 from atexit import register
 from optparse import OptionParser
@@ -10,7 +12,7 @@ from pprint import pprint
 from six.moves import input
 
 from googlevoice.voice import Voice
-from googlevoice.util import LoginError, print_
+from googlevoice.util import LoginError
 
 parser = OptionParser(usage='''gvoice [options] commands
     Where commands are
@@ -57,7 +59,7 @@ def login(email, passwd, batch):
         voice.login(email, passwd)
     except LoginError:
         if batch:
-            print_('Login failed.')
+            print('Login failed.')
             exit(0)
         if input('Login failed. Retry?[Y/n] ').lower() in ('', 'y'):
             login(None, None, batch)
@@ -67,13 +69,13 @@ def login(email, passwd, batch):
 
 def logout():
     global voice
-    print_('Logging out of voice...')
+    print('Logging out of voice...')
     voice.logout()
 
 
 def pprint_folder(name):
     folder = getattr(voice, name)()
-    print_(folder)
+    print(folder)
     pprint(folder.messages, indent=4)
 
 
@@ -86,7 +88,7 @@ def main():
         action = 'interactive'
 
     if action == 'help':
-        print_(parser.usage)
+        print(parser.usage)
         exit(0)
 
     voice = Voice()
@@ -117,22 +119,22 @@ def main():
                             'Phone type [1-Home, 2-Mobile, 3-Work, 7-Gizmo]:'
                         ) or 2)
                 )
-                print_('Calling...')
+                print('Calling...')
             elif action in ('cancelcall', 'cc'):
                 voice.cancel()
             elif action in ('sendsms', 's'):
                 voice.send_sms(input('Phone number: '), input('Message: '))
-                print_('Message Sent')
+                print('Message Sent')
             elif action in ('search', 'se'):
                 se = voice.search(input('Search query: '))
-                print_(se)
+                print(se)
                 pprint(se.messages)
             elif action in ('download', 'd'):
-                print_(
+                print(
                     'MP3 downloaded to %s'
                     % voice.download(input('Message sha1: ')))
             elif action in ('help', 'h', '?'):
-                print_(parser.usage)
+                print(parser.usage)
             elif action in ('trash', 't'):
                 pprint_folder('trash')
             elif action in ('spam', 'sp'):
@@ -158,7 +160,7 @@ def main():
             try:
                 num, args = args[0], args[1:]
             except Exception:
-                print_('Please provide a message')
+                print('Please provide a message')
                 exit(0)
             args = (num, ' '.join(args))
         getattr(voice, action)(*args)

@@ -2,15 +2,16 @@
 """
 Jacob Feisley, Ward Mundy, and Justin Quick
 """
+
+from __future__ import print_function
+
 from sys import exit
 from getpass import getpass
 from six.moves import input
 
-from googlevoice.util import print_
-
 
 def main():
-    print_("""This script installs Google Voice support on your PBX.
+    print("""This script installs Google Voice support on your PBX.
     You must have a system that is compatible with PBX in a Flash.
     WARNING: No error checking is provided.
     By using this script, you agree to assume ALL RISK.
@@ -28,7 +29,7 @@ def main():
     if not conf.strip():
         conf = conf_default
 
-    print_("""
+    print("""
     Your Google Voice entries are stored in %s
     Edit that file and reload your Asterisk dialplan if you
     make future changes.
@@ -57,7 +58,7 @@ def main():
     Hit Enter key to proceed
     """ % settings)
 
-    print_("""
+    print("""
     Installing Google Voice support for your PBX. One moment please...
     """)
 
@@ -91,10 +92,10 @@ def main():
         fo.write(content % settings)
         fo.close()
     except IOError:
-        print_('Error opening file for writing: %s' % conf)
+        print('Error opening file for writing: %s' % conf)
         exit(0)
 
-    print_("""
+    print("""
     Installation script is finished. Do NOT run it again on this system!
 
     You can now reload your Asterisk dialplan configuration with
