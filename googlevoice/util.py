@@ -175,9 +175,9 @@ class Message(AttrDict):
         self.folder = folder
         self.id = id
         super(AttrDict, self).__init__(data)
-        self['startTime'] = gmtime(int(self['startTime'])/1000)
+        self['startTime'] = gmtime(int(self['startTime']) / 1000)
         self['displayStartDateTime'] = datetime.strptime(
-                self['displayStartDateTime'], '%m/%d/%y %I:%M %p')
+            self['displayStartDateTime'], '%m/%d/%y %I:%M %p')
         self['displayStartTime'] = self['displayStartDateTime'].time()
 
     def delete(self, trash=1):
@@ -272,7 +272,8 @@ class XMLParser(object):
         if name in ('json', 'html'):
             self.attr = name
 
-    def end_element(self, name): self.attr = None
+    def end_element(self, name):
+        self.attr = None
 
     def char_data(self, data):
         if self.attr and data:
