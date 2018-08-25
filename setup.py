@@ -39,6 +39,7 @@ params = dict(
 			'pytest-flake8',
 
 			# local
+			'bs4',
 		],
 		'docs': [
 			# upstream

@@ -4,8 +4,10 @@
 # John Nagle
 #   nagle@animats.com
 #
+
+import bs4
+
 from googlevoice import Voice
-import BeautifulSoup
 
 
 def extractsms(htmlsms):
@@ -17,7 +19,7 @@ def extractsms(htmlsms):
     """
     msgitems = []										# accum message items here
     # Extract all conversations by searching for a DIV with an ID at top level.
-    tree = BeautifulSoup.BeautifulSoup(htmlsms)			# parse HTML into tree
+    tree = bs4.BeautifulSoup(htmlsms)			# parse HTML into tree
     conversations = tree.findAll("div", attrs={"id": True}, recursive=False)
     for conversation in conversations:
         # For each conversation, extract each row, which is one SMS message.
