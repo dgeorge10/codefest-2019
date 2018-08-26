@@ -39,7 +39,7 @@ parser = OptionParser(usage='''gvoice [options] commands
         sms (sm)
         recorded (r)
         placed (p)
-        recieved (re)
+        received (re)
         missed (m)''')
 parser.add_option("-e", "--email", dest="email", default=None,
                   help="Google Voice Account Email")
@@ -149,8 +149,8 @@ def main():
                 pprint_folder('starred')
             elif action in ('missed', 'm'):
                 pprint_folder('missed')
-            elif action in ('recieved', 're'):
-                pprint_folder('recieved')
+            elif action in ('received', 're'):
+                pprint_folder('received')
             elif action in ('recorded', 'r'):
                 pprint_folder('recorded')
             elif action in ('sms', 'sm'):
