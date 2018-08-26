@@ -1,12 +1,11 @@
 import os
-from unittest import TestCase, main
 
 from six.moves import input
 
 from googlevoice import Voice
 
 
-class VoiceTest(TestCase):
+class VoiceTest:
     voice = Voice()
     voice.login()
     outgoing = input('Outgoing number (blank to ignore call tests): ')
@@ -25,16 +24,16 @@ class VoiceTest(TestCase):
             self.voice.cancel(self.outgoing, self.forwarding)
 
     def test_special(self):
-        self.assert_(self.voice.special)
+        assert self.voice.special
 
     def test_inbox(self):
-        self.assert_(self.voice.inbox)
+        assert self.voice.inbox
 
     def test_balance(self):
-        self.assert_(self.voice.settings['credits'])
+        assert self.voice.settings['credits']
 
     def test_search(self):
-        self.assert_(len(self.voice.search('joe')))
+        assert len(self.voice.search('joe'))
 
     def test_disable_enable(self):
         self.voice.phones[0].disable()
@@ -46,18 +45,14 @@ class VoiceTest(TestCase):
         if os.path.isfile(fn):
             os.remove(fn)
         self.voice.download(msg)
-        self.assert_(os.path.isfile(fn))
+        assert os.path.isfile(fn)
 
     def test_zlogout(self):
         self.voice.logout()
-        self.assert_(self.voice.special is None)
+        self.voice.special is None
 
     def test_config(self):
         from conf import config
-        self.assert_(config.forwardingNumber)
-        self.assert_(str(config.phoneType) in '1237')
-        self.assertEqual(config.get('wtf'), None)
-
-
-if __name__ == '__main__':
-    main()
+        config.forwardingNumber
+        str(config.phoneType) in '1237'
+        assert config.get('wtf') is None
