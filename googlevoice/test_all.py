@@ -12,6 +12,7 @@ import pytest
 
 from googlevoice import Voice
 from googlevoice import settings
+from googlevoice import conf
 
 
 @pytest.fixture
@@ -108,7 +109,6 @@ class TestVoice:
         voice.special is None
 
     def test_config(self):
-        from conf import config
-        config.forwardingNumber
-        str(config.phoneType) in '1237'
-        assert config.get('wtf') is None
+        assert conf.config.forwardingNumber
+        assert str(conf.config.phoneType) in '1237'
+        assert conf.config.get('wtf') is None
