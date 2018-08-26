@@ -1,3 +1,9 @@
+2.0.1
+=====
+
+* #2: Fixed bugs in login. Confirmed ``examples/sms.py`` works
+  again.
+
 2.0
 ===
 
