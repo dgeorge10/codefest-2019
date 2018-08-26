@@ -1,13 +1,18 @@
-Welcome to skeleton documentation!
-========================================
+Welcome to googlevoice documentation!
+=====================================
 
 .. toctree::
    :maxdepth: 1
 
    history
+   install
+   config
+   scripts
+   examples
+   api
 
 
-.. automodule:: skeleton
+.. automodule:: googlevoice
     :members:
     :undoc-members:
     :show-inheritance:
