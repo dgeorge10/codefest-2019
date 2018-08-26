@@ -9,10 +9,14 @@ from six.moves import input
 
 import responses
 import pytest
+import faker
 
 from googlevoice import Voice
 from googlevoice import settings
 from googlevoice import conf
+
+
+fake = faker.Faker()
 
 
 @pytest.fixture
@@ -32,14 +36,9 @@ def config(tmpdir):
     return conf.Config(str(tmpdir / 'test-config.ini'))
 
 
-@pytest.fixture
-def default_config(config, monkeypatch):
-    monkeypatch.setattr(conf, 'config', config)
-
-
 class TestVoice:
     @responses.activate
-    def test_login(self, random_gxf, default_config):
+    def test_login(self, random_gxf):
         responses.add(
             responses.GET,
             settings.LOGIN,
@@ -59,7 +58,7 @@ class TestVoice:
             "'_rnr_se': 'special-value'"
         )
         voice = Voice()
-        voice.login()
+        voice.login(email=fake.email(), passwd=fake.password())
         assert voice.special == 'special-value'
 
     @pytest.fixture(scope='class')
