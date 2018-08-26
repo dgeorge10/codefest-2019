@@ -9,8 +9,8 @@
 .. .. image:: https://img.shields.io/appveyor/ci/jaraco/googlevoice/master.svg
 ..    :target: https://ci.appveyor.com/project/jaraco/googlevoice/branch/master
 
-.. .. image:: https://readthedocs.org/projects/googlevoice/badge/?version=latest
-..    :target: https://googlevoice.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/googlevoice/badge/?version=latest
+   :target: https://googlevoice.readthedocs.io/en/latest/?badge=latest
 
 
 Python Google Voice Library
