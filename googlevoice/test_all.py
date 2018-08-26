@@ -96,13 +96,12 @@ class TestVoice:
         voice.phones[0].disable()
         voice.phones[0].enable()
 
-    def test_download(self, voice):
+    def test_download(self, voice, tmpdir):
         msg = list(voice.voicemail().messages)[0]
         fn = '%s.mp3' % msg.id
-        if os.path.isfile(fn):
-            os.remove(fn)
-        voice.download(msg)
-        assert os.path.isfile(fn)
+        with tmpdir.as_cwd():
+            voice.download(msg)
+            assert os.path.isfile(fn)
 
     def test_zlogout(self, voice):
         voice.logout()
