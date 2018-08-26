@@ -40,6 +40,7 @@ params = dict(
 
 			# local
 			'bs4',
+			'responses',
 		],
 		'docs': [
 			# upstream
