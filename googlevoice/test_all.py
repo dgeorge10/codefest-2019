@@ -108,7 +108,9 @@ class TestVoice:
         voice.logout()
         voice.special is None
 
-    def test_config(self):
+
+class TestConfig:
+    def test_basics(self):
         assert conf.config.forwardingNumber
         assert str(conf.config.phoneType) in '1237'
         assert conf.config.get('wtf') is None
