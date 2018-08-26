@@ -1,3 +1,8 @@
+2.0.4
+=====
+
+* pettazz/pygooglevoice#10: Fix typo in ``googlevoice`` command.
+
 2.0.3
 =====
 
