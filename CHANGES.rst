@@ -1,3 +1,9 @@
+2.0.2
+=====
+
+Fixed more bugs in the implementation, revealed by an enhanced
+test suite.
+
 2.0.1
 =====
 
