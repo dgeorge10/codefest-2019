@@ -110,7 +110,21 @@ class TestVoice:
 
 
 class TestConfig:
-    def test_basics(self):
-        assert conf.config.forwardingNumber
-        assert str(conf.config.phoneType) in '1237'
-        assert conf.config.get('wtf') is None
+    @pytest.fixture
+    def config(self, tmpdir):
+        return conf.Config(str(tmpdir / 'test-config.ini'))
+
+    def test_defaults(self, config):
+        assert config.forwardingNumber is None
+        assert config.phoneType == 2
+
+    def test_missing_key(self, config):
+        assert config.get('wtf') is None
+
+    def test_set_get(self, config):
+        number = '+15555551212'
+        config.set('forwardingNumber', number)
+        assert config.forwardingNumber == number
+        config.save()
+        new_config = conf.Config(config.fname)
+        assert new_config.forwardingNumber == number
