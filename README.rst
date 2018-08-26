@@ -6,8 +6,8 @@
 .. image:: https://img.shields.io/travis/jaraco/googlevoice/master.svg
    :target: https://travis-ci.org/jaraco/googlevoice
 
-.. .. image:: https://img.shields.io/appveyor/ci/jaraco/googlevoice/master.svg
-..    :target: https://ci.appveyor.com/project/jaraco/googlevoice/branch/master
+.. image:: https://img.shields.io/appveyor/ci/jaraco/googlevoice/master.svg
+   :target: https://ci.appveyor.com/project/jaraco/googlevoice/branch/master
 
 .. image:: https://readthedocs.org/projects/googlevoice/badge/?version=latest
    :target: https://googlevoice.readthedocs.io/en/latest/?badge=latest
