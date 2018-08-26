@@ -1,3 +1,10 @@
+2.0.3
+=====
+
+* pettazz/pygooglevoice#4: Removed multiple checks for sha-1
+  hash, which failed in some cases when the Message IDs
+  weren't of that form.
+
 2.0.2
 =====
 
