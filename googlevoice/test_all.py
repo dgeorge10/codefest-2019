@@ -27,9 +27,19 @@ def random_gxf():
     return '{token}:{timestamp}'.format(**locals())
 
 
+@pytest.fixture
+def config(tmpdir):
+    return conf.Config(str(tmpdir / 'test-config.ini'))
+
+
+@pytest.fixture
+def default_config(config, monkeypatch):
+    monkeypatch.setattr(conf, 'config', config)
+
+
 class TestVoice:
     @responses.activate
-    def test_login(self, random_gxf):
+    def test_login(self, random_gxf, default_config):
         responses.add(
             responses.GET,
             settings.LOGIN,
@@ -114,10 +124,6 @@ class TestVoice:
 
 
 class TestConfig:
-    @pytest.fixture
-    def config(self, tmpdir):
-        return conf.Config(str(tmpdir / 'test-config.ini'))
-
     def test_defaults(self, config):
         assert config.forwardingNumber is None
         assert config.phoneType == 2
