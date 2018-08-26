@@ -10,8 +10,8 @@ class Config(configparser.ConfigParser):
     ``ConfigParser`` subclass that looks into your home folder for a file named
     ``.gvoice`` and parses configuration data from it.
     """
-    def __init__(self):
-        self.fname = os.path.expanduser('~/.gvoice')
+    def __init__(self, filename=os.path.expanduser('~/.gvoice')):
+        self.fname = filename
 
         if not os.path.exists(self.fname):
             try:
