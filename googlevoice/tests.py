@@ -1,15 +1,18 @@
-from googlevoice import Voice, util
-from os import path, remove
+import os
 from unittest import TestCase, main
+
+from six.moves import input
+
+from googlevoice import Voice
 
 
 class VoiceTest(TestCase):
     voice = Voice()
     voice.login()
-    outgoing = util.input('Outgoing number (blank to ignore call tests): ')
+    outgoing = input('Outgoing number (blank to ignore call tests): ')
     forwarding = None
     if outgoing:
-        forwarding = util.input('Forwarding number [optional]: ') or None
+        forwarding = input('Forwarding number [optional]: ') or None
 
     if outgoing:
         def test_1call(self):
@@ -40,10 +43,10 @@ class VoiceTest(TestCase):
     def test_download(self):
         msg = list(self.voice.voicemail.messages)[0]
         fn = '%s.mp3' % msg.id
-        if path.isfile(fn):
-            remove(fn)
+        if os.path.isfile(fn):
+            os.remove(fn)
         self.voice.download(msg)
-        self.assert_(path.isfile(fn))
+        self.assert_(os.path.isfile(fn))
 
     def test_zlogout(self):
         self.voice.logout()
