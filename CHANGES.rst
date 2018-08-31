@@ -1,3 +1,8 @@
+2.0.5
+=====
+
+* #3: Fixed error in Delete message.
+
 2.0.4
 =====
 
