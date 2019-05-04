@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //routes
 app.use("/api/shelters", require("./routes/shelters"));
+app.use("/api/food", require("./routes/food"));
 app.use("/api/guests", require("./routes/guests"));
 
 //start on port 5000 or on whichever port the server allows

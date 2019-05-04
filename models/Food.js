@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const db = require('../config/database');
 
 //model for a user
-const Shelter = db.define('Food', {
+const Food = db.define('Food', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true

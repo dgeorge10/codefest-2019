@@ -25,12 +25,6 @@ const Shelter = db.define('Shelters', {
     gender: {
         type: Sequelize.STRING
     },
-    day: {
-        type: Sequelize.STRING
-    },
-    timein: {
-        type: Sequelize.STRING
-    },
     timeout: {
         type: Sequelize.STRING
     },
@@ -41,6 +35,48 @@ const Shelter = db.define('Shelters', {
         type: Sequelize.STRING
     },
     registration: {
+        type: Sequelize.STRING
+    },
+    mondayIn: {
+        type: Sequelize.STRING
+    },
+    mondayOut: {
+        type: Sequelize.STRING
+    },
+    tuesdayIn: {
+        type: Sequelize.STRING
+    },
+    tuesdayOut: {
+        type: Sequelize.STRING
+    },
+    wednesdayIn: {
+        type: Sequelize.STRING
+    },
+    wednesdayOut: {
+        type: Sequelize.STRING
+    },
+    thursdayIn: {
+        type: Sequelize.STRING
+    },
+    thursdayOut: {
+        type: Sequelize.STRING
+    },
+    fridayIn: {
+        type: Sequelize.STRING
+    },
+    fridayOut: {
+        type: Sequelize.STRING
+    },
+    saturdayIn: {
+        type: Sequelize.STRING
+    },
+    saturdayOut: {
+        type: Sequelize.STRING
+    },
+    sundayIn: {
+        type: Sequelize.STRING
+    },
+    sundayOut: {
         type: Sequelize.STRING
     }
 })
