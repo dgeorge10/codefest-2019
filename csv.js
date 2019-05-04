@@ -5,10 +5,10 @@ const googleMapsClient = require('@google/maps').createClient({
   key: 'AIzaSyC5TCyAGCOGtx01jshP07GQ5fPYUj1b3xw'
 });
 
-fs.createReadStream('data/Food.csv')
+fs.createReadStream('data/Shelter.csv')
   .pipe(csv())
   .on('data', (row) => {
-    my_address = row['Address - Line 1 '] + ", " + row['City']
+    my_address = row['ADDRESS'] + ", " + row['CITY']
     googleMapsClient.geocode({
       address: my_address
     }, function(err, response) {
