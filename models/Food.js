@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const db = require('../config/database');
 
 //model for a user
-const Shelter = db.define('Food', {
+const Food = db.define('Food', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true
@@ -31,48 +31,27 @@ const Shelter = db.define('Food', {
     bucks: {
         type: Sequelize.STRING
     },
-    mondayIn: {
+    monday: {
         type: Sequelize.STRING
     },
-    mondayOut: {
+    tuesday: {
         type: Sequelize.STRING
     },
-    tuesdayIn: {
+    wednesday: {
         type: Sequelize.STRING
     },
-    tuesdayOut: {
+    thursday: {
         type: Sequelize.STRING
     },
-    wednesdayIn: {
+    friday: {
         type: Sequelize.STRING
     },
-    wednesdayOut: {
+    saturday: {
         type: Sequelize.STRING
     },
-    thursdayIn: {
+    sunday: {
         type: Sequelize.STRING
     },
-    thursdayOut: {
-        type: Sequelize.STRING
-    },
-    fridayIn: {
-        type: Sequelize.STRING
-    },
-    fridayOut: {
-        type: Sequelize.STRING
-    },
-    saturdayIn: {
-        type: Sequelize.STRING
-    },
-    saturdayOut: {
-        type: Sequelize.STRING
-    },
-    sundayIn: {
-        type: Sequelize.STRING
-    },
-    sundayOut: {
-        type: Sequelize.STRING
-    }
 })
 
 module.exports = Food;
