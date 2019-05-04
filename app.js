@@ -35,6 +35,26 @@ app.get("/logout", (req, res) => {
 app.get("/dashboard", (req,res) => {
 	res.sendFile(path.join(__dirname, "public/dashboard.html"))
 })
+
+
+app.get("/", (req,res)=>{
+	res.write(fs.readFileSync(__dirname + "/public/index.html"));
+	res.end();
+});
+app.get("/index", (req,res)=>{
+	res.write(fs.readFileSync(__dirname + "/public/index.html"));
+	res.end();
+});
+app.get("/food", (req,res)=>{
+	res.write(fs.readFileSync(__dirname + "/public/input_food.html"));
+	res.end();
+});
+app.get("/shelter", (req,res)=>{
+	res.write(fs.readFileSync(__dirname + "/public/input_shelter.html"));
+	res.end();
+});
+
+
 //routes
 app.use("/api/shelters", require("./routes/shelters"));
 app.use("/api/food", require("./routes/food"));
