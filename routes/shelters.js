@@ -12,27 +12,28 @@ router.get("/", (req,res) => {
 
 router.post("/", (req,res) => {
     let { name, address, city, state, zip, gender, day, timein, timeout, beds, ages_served, registration } = req.body;
-
-   if (!name || !address || !city || !state || !zip || !gender || !day || !timein || !timeout || !beds || !ages_served || !registration) {
-        res.send(400);
+    console.log(req.body)
+    if (!name || !address || !city || !state || !zip || !gender || !day || !timein || !timeout || !beds || !ages_served || !registration) {
+        res.sendStatus(400);
+    } else {
+        const newShelter = shelter.build({
+            name,
+            address,
+            city,
+            state,
+            zip,
+            gender,
+            day, 
+            timein,
+            timeout,
+            beds,
+            ages_served,
+            registration
+        })
+        newShelter.save()
+        .then(() => res.send("shelter saved"))
+        .catch((err) => console.log(err))
     }
-    const newShelter = shelter.build({
-        name,
-        address,
-        city,
-        state,
-        zip,
-        gender,
-        day, 
-        timein,
-        timeout,
-        beds,
-        ages_served,
-        registration
-    })
-    newShelter.save()
-    .then(() => res.send("shelter saved"))
-    .catch(() => console.log(err))
 })
 
 module.exports = router;
