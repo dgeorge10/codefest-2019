@@ -1,116 +1,120 @@
-Type,Name,Address - Line 1 ,City,State,Zip Code,SNAP,FMNP,Philly Food Bucks,Sunday,"Monday Opening Time (military time - e.g., 8:00 or 17:00)","Monday Closing Time (military time - e.g., 8:00 or 17:00)","Tuesday Opening Time (military time - e.g., 8:00 or 17:00)","Tuesday Closing Time (military time - e.g., 8:00 or 17:00)","Wednesday Opening Time (military time - e.g., 8:00 or 17:00)","Wednesday Closing Time (military time - e.g., 8:00 or 17:00)","Thursday Opening Time (military time - e.g., 8:00 or 17:00)","Thursday Closing Time (military time - e.g., 8:00 or 17:00)","Friday Opening Time (military time - e.g., 8:00 or 17:00)","Friday Closing Time (military time - e.g., 8:00 or 17:00)","Saturday Opening Time (military time - e.g., 8:00 or 17:00)","Saturday Closing Time (military time - e.g., 8:00 or 17:00)"
-FARMERS_MARKET,Greensgrow Farm Stand,2501 E. Cumberland Ave,Philadelphia,PA,19125,Yes,Yes,Yes,,,,,,,,15:00,19:00,,,10:00,15:00
-FARMERS_MARKET,Rittenhouse,18th St and Walnut St,Philadelphia,PA,19103,Yes,Yes,,,,,10:00,13:00,,,,,,,9:00,15:00
-FARMERS_MARKET,Broad and South,Broad St and South St,Philadelphia,PA,19147,Yes,Yes,Yes,,,,,,14:00,18:00,,,,,,
-FARMERS_MARKET,Schuylkill River Park,25th St and Spruce St,Philadelphia,PA,19103,,Yes,,,,,,,15:00,19:00,,,,,,
-FARMERS_MARKET,Fairmount,22nd St and Fairmount Ave,Philadelphia,PA,19130,Yes,Yes,Yes,,,,,,,,15:00,19:00,,,,
-FARMERS_MARKET,Suburban Station,16th St and JFK Blvd,Philadelphia,PA,19103,,Yes,,,,,,,12:00,18:30,,,,,,
-FARMERS_MARKET,Jefferson,10th St and Chestnut St,Philadelphia,PA,19107,Yes,Yes,,,,,,,,,11:00,15:30,,,,
-FARMERS_MARKET,Fitler Square Park,23rd St nd Pine St,Philadelphia,PA,19103,,Yes,,,,,,,,,,,,,9:00,14:00
-FARMERS_MARKET,Headhouse,2nd St and Lombard St,Philadelphia,PA,19147,Yes,Yes,Yes,10:00-14:00,,,,,,,,,,,,
-FARMERS_MARKET,Federal Building ,20 N. 6th St,Philadelphia,PA,19106,Yes,,,10:00-14:00,,,,,,,,,,,,
-FARMERS_MARKET,Reading Terminal Market,12th St and Arch St,Philadelphia,PA,19107,Yes,Yes,,9:00-17:00,8:00,18:00,8:00,18:00,8:00,18:00,8:00,18:00,8:00,18:00,8:00,18:00
-FARMERS_MARKET,Fair Food Farmstand,51 N. 12th St,Philadelphia,PA,19107,Yes,,Yes,9:00-17:00,8:00,18:00,8:00,18:00,8:00,18:00,8:00,18:00,8:00,18:00,8:00,18:00
-FARMERS_MARKET,SEPTA farm stand,1234 Market St,Philadelphia,PA,19107,,,,,,,,,11:00,13:30,,,,,,
-FARMERS_MARKET,N. 3rd St Market,Church St and 3rd St,Philadelphia,PA,19106,,,,,,,14:00,19:00,,,,,,,,
-FARMERS_MARKET,Parkway,16th St and Benjamin Franklin Pkwy,Philadelphia,PA,19103,Yes,Yes,,,,,,,,,11:00,18:00,,,,
-FARMERS_MARKET,Chew and E. Pleasant,Chew Ave and E. Pleasant Ave,Philadelphia,PA,19119,Yes,Yes,Yes,,,,,,14:00,18:00,,,,,,
-FARMERS_MARKET,Germantown,Germantown Ave and Walnut Ln,Philadelphia,PA,19144,Yes,Yes,Yes,,,,,,,,,,14:00,18:00,,
-FARMERS_MARKET,Germantown Kitchen Garden,215 E. Penn St,Philadelphia,PA,19144,Yes,Yes,,,,,,,16:00,19:00,,,,,9:00,13:00
-FARMERS_MARKET,East Falls ,Kelly Dr and Ridge Ave,Philadelphia,PA,19129,Yes,Yes,,,,,,,,,,,,,10:00,14:00
-FARMERS_MARKET,Chestnut Hill Farmers' Market,Winston Rd and Germantown Ave,Philadelphia,PA,19118,,Yes,,,,,,,,,,,,,9:30,13:30
-FARMERS_MARKET,Weaver's Way Community Programs Farm Stand,8424 Germantown Ave,Philadelphia,PA,19118,,Yes,,,,,15:00,18:00,,,,,,,,
-FARMERS_MARKET,Broad and Mt. Vernon,Broad St and Mt. Vernon St ,Philadelphia,PA,19130,Yes,Yes,Yes,10:00-14:00,,,,,,,,,,,,
-FARMERS_MARKET,Francisville,19th St and Fairmount Ave,Philadelphia,PA,19130,Yes,Yes,,,,,,,,,,,14:00,18:00,,
-FARMERS_MARKET,Girard and 27th ,27th St and Girard Ave,Philadelphia,PA,19130,,Yes,,,,,,,,,,,,,10:00,13:00
-FARMERS_MARKET,8th & Poplar,8th St and Poplar St,Philadelphia,PA,19123,Yes,Yes,,,,,,,15:00,18:00,,,,,,
-FARMERS_MARKET,Liberty Lands Park,3rd St and Poplar St ,Philadelphia,PA,19123,Yes,Yes,Yes,,,,,,,,15:00,19:00,,,,
-FARMERS_MARKET,Oxford Circle,900 East Howell St,Philadelphia,PA,19149,Yes,Yes,Yes,,,,,,,,14:00,18:00,,,,
-FARMERS_MARKET,Cecil B. Moore,Cecil B. Moore Ave and 13th St,Philadelphia,PA,19122,Yes,Yes,Yes,,,,,,,,14:00,18:00,,,,
-FARMERS_MARKET,Hunting Park,W. Hunting Park Ave and Old York Ave,Philadelphia,PA,19140,Yes,Yes,Yes,,,,,,,,,,,,10:00,14:00
-FARMERS_MARKET,Olney Transportation Center ,Broad St and Olney Ave,Philadelphia,PA,19141,Yes,Yes,Yes,,,,14:00,18:00,,,,,,,,
-FARMERS_MARKET,4th and Lehigh ,4th St and Lehigh Ave,Philadelphia,PA,19133,Yes,Yes,Yes,,,,13:00,17:00,,,,,,,,
-FARMERS_MARKET,33rd and Diamond,33rd St and Diamond Sts,Philadelphia,PA,19121,Yes,Yes,Yes,,,,14:00,18:00,,,,,,,,
-FARMERS_MARKET,East Park Revitalization Alliance,Ridge Ave and Natrona St,Philadelphia,PA,19132,,Yes,,,,,,,15:00,18:00,,,,,,
-FARMERS_MARKET,SHARE Nice Roots Farm,2901 W. Hunting Park Ave,Philadelphia,PA,19129,Yes,Yes,Yes,,,,14:00,16:00,,,14:00,16:00,,,,
-FARMERS_MARKET,26th and Allegheny,26th St and Allegheny Ave,Philadelphia,PA,19129,Yes,Yes,Yes,,,,,,13:00,17:00,,,,,,
-FARMERS_MARKET,Frankford Transportation Center ,Frankford and Bustleton Ave,Philadelphia,PA,19124,Yes,Yes,Yes,,,,14:00,18:00,,,,,,,,
-FARMERS_MARKET,Mayfair,Frankford Ave and Ryan Ave,Philadelphia,PA,19149,,,,10:00-14:00,,,,,,,,,,,,
-FARMERS_MARKET,Parkwood,Byberry Rd and Barbary Rd,Philadelphia,PA,19154,Yes,Yes,Yes,,,,,,,,,,,,10:00,14:00
-FARMERS_MARKET,New Foundations Charter School,8001 Torresdale Ave,Philadelphia,PA,19136,Yes,Yes,,,,,,,2:00,,,,,,,
-FARMERS_MARKET,Henry Got Crops!,7100 Henry Ave,Philadelphia,PA,19129,,Yes,,,,,14:00,19:00,,,,,14:00,19:00,,
-FARMERS_MARKET,Mt. Airy ,Carpenter Ln and Greene St,Philadelphia,PA,19119,,Yes,,,,,,,,,14:30,18:30,,,,
-FARMERS_MARKET,Grumblethorpe House,5267 Germantown Ave,Philadelphia,PA,19144,Yes,Yes,,,,,,,,,,,,,9:30,13:30
-FARMERS_MARKET,Wadsworth ,E. Wadsworth Ave and Bayard St.,Philadelphia,PA,19150,Yes,Yes,,,,,,,,,,,10:00,14:00,,
-FARMERS_MARKET,West Oak Lane,Ogontz Ave and 72nd Ave,Philadelphia,PA,19138,Yes,Yes,Yes,,,,14:00,18:00,,,,,,,,
-FARMERS_MARKET,Gorgas Park,Ridge Ave and Acorn St,Philadelphia,PA,19128,Yes,Yes,,,,,,,,,,,14:00,18:00,,
-FARMERS_MARKET,Pretzel Park,4300 Silverwood St,Philadelphia,PA,19127,,,,,,,,,,,,,14:00,18:00,,
-FARMERS_MARKET,18th and Christian,18th St and Christian St,Philadelphia,PA,19146,Yes,Yes,Yes,,,,,,15:00,19:00,,,,,,
-FARMERS_MARKET,Broad and Snyder,Broad St and Snyder St,Philadelphia,PA,19148,Yes,Yes,Yes,,,,14:00,18:00,,,,,,,,
-FARMERS_MARKET,Fountain,11th St and Tasker St,Philadelphia,PA,19147,Yes,Yes,,,,,,,15:00,19:00,,,,,,
-FARMERS_MARKET,Dickinson Square,East Moyamensing St and Morris St,Philadelphia,PA,19148,Yes,Yes,Yes,10:00-14:00,,,,,,,,,,,,
-FARMERS_MARKET,29th & Wharton,29th St and Wharton St,Philadelphia,PA,19146,Yes,Yes,Yes,,,,14:00,18:00,,,,,,,,
-FARMERS_MARKET,22nd & Tasker,22nd St and Tasker St,Philadelphia,PA,19146,Yes,Yes,Yes,,,,14:00,18:00,,,,,,,,
-FARMERS_MARKET,Farm 51,51st St and Chester Ave,Philadelphia,PA,19143,Yes,,,,,,,,,,16:30,19:00,,,,
-FARMERS_MARKET,Bartram's Farm Market,54th St and Lindbergh Blvd,Philadelphia,PA,19143,Yes,Yes,,,,,,,,,15:30,18:30,,,,
-FARMERS_MARKET,58th & Chester,58th St and Chester St,Philadelphia,PA,19143,Yes,Yes,Yes,,,,,,14:00,18:00,,,,,,
-FARMERS_MARKET,Earthskeepers,5100 Kingsessing Ave,Philadelphia,PA,19143,,,,,9:00,14:00,9:00,14:00,9:00,14:00,9:00,14:00,,,,
-FARMERS_MARKET,71st and Woodland,71st St and Woodland Ave,Philadelphia,PA,19142,Yes,Yes,Yes,,,,,,,,,,,,,
-FARMERS_MARKET,52nd & Haverford,52nd St and Haverford Ave,Philadelphia,PA,19139,Yes,Yes,Yes,,,,,,13:00,17:00,,,13:00,17:00,,
-FARMERS_MARKET,Clark Park,43rd St and Baltimore Ave,Philadelphia,PA,19104,Yes,Yes,Yes,,,,,,,,15:00,19:00,,,10:00,14:00
-FARMERS_MARKET,Greensgrow West Farm Stand,4912 Baltimore Ave,Philadelphia,PA,19143,Yes,Yes,,,,,,,,,,,15:00,18:00,,
-FARMERS_MARKET,Overbrook Farms,Lancaster Ave and City Ave,Philadelphia,PA,19151,Yes,Yes,Yes,,,,,,,,,,,,9:00,13:00
-FARMERS_MARKET,Heritage Farm ,4300 Monument Rd,Philadelphia,PA,19131,Yes,Yes,,,,,,,,,15:00,18:00,,,,
-FARMERS_MARKET,University Square,36th St and Walnut St,Philadelphia,PA,19104,Yes,Yes,,,,,,,10:00,15:00,,,,,,
-FARMERS_MARKET,Mill Creek Farm,Brown St and N 49th St,Philadelphia,PA,19139,Yes,Yes,Yes,,,,,,,,,,,,11:00,14:00
-FARMERS_MARKET,Drexel University,32nd St and Chestnut St,Philadelphia,PA,19104,Yes,Yes,,,,,11:00,15:00,,,,,,,,
-FARMERS_MARKET,Lancaster Ave,Lancaster Ave and Powelton St,Philadelphia,PA,19104,Yes,Yes,Yes,,,,,,,,,,,,10:00,16:00
-FARMERS_MARKET,Urban Tree Harvest ,53rd St and Poplar St,Philadelphia,PA,19131,Yes,Yes,,,,,,,,,,,,,10:00,14:00
-FARMERS_MARKET,Walnut Hill,4610 Market St,Philadelphia,PA,19139,Yes,Yes,,,,,,,,,,,16:00,19:00,,
-SOUP_KITCHEN,Bright Hope Baptist Church ,12th St and Cecil B. Moore Ave,Philadelphia,PA,19122,,,,,18:00,19:15,18:00,19:15,18:00,19:15,18:00,19:15,,,11:00,12:00
-SOUP_KITCHEN,Church of The Advocate,2121 N. Gratz St,Philadelphia,PA,19121,,,,,12:00,15:00,10:00,14:00,12:00,15:00,12:00,15:00,12:00,15:00,,
-SOUP_KITCHEN,First African Presbyterian Church  ,4159 W Girard Ave,Philadelphia,PA,19104,,,,,,,,,12:00,14:00,,,,,,
-SOUP_KITCHEN,Genesis Ministries,2229 N. Cleveland St,Philadelphia,PA,19132,,,,,,,11:00,14:00,11:00,14:00,11:00,14:00,,,,
-SOUP_KITCHEN,Harambee Baptist Church ,5648 Chew Ave,Philadelphia,PA,19138,,,,,,,12:30,15:30,12:30,15:30,12:30,15:30,,,,
-SOUP_KITCHEN,Holsey Temple ,5305-15 Germantown Ave,Philadelphia,PA,19144,,,,8:30-9:30,,,11:00,13:00,,,,,,,,
-SOUP_KITCHEN,Iglesia Cristiana Avivamiento,541 E. Cambria St,Philadelphia,PA,19134,,,,,12:00,15:00,12:00,15:00,12:00,15:00,12:00,15:00,12:00,15:00,,
-SOUP_KITCHEN,Lombard Central Presbyterian Church ,4201 Powelton Ave,Philadelphia,PA,19104,,,,,,,8:00,11:00,8:00,11:00,8:00,11:00,8:00,11:00,,
-SOUP_KITCHEN,Memorial Tabernacle Baptist Church,2249 Hunting Park Ave,Philadelphia,PA,19140,,,,,10:00,13:00,,,10:00,14:00,,,,,,
-SOUP_KITCHEN,Miller Memorial Baptist Church,1518 N. 22nd St,Philadelphia,PA,19121,,,,,,,,,,,12:00,13:30,,,,
-SOUP_KITCHEN,Monumental Baptist Church,4948 Locust St,Philadelphia,PA,19139,,,,,,,,,12:00,13:00,,,,,,
-SOUP_KITCHEN,Mt. Tabor Baptist Church,110 W. Rittenhouse St,Philadelphia,PA,19144,,,,,,,,,,,12:00,13:00,,,,
-SOUP_KITCHEN,Mt. Zion Baptist Church ,41 W. Rittenhouse St,Philadelphia,PA,19144,,,,,,,,,12:00,13:00,,,,,,
-SOUP_KITCHEN,Mt. Olive Holy Temple ,1469 N. Broad St,Philadelphia,PA,19122,,,,14:00-15:00,,,13:00,14:00,,,,,,,,
-SOUP_KITCHEN,New Jerusalem CDC,14 E. Clapier St,Philadelphia,PA,19144,,,,,,,,,,,,,13:00,15:00,,
-SOUP_KITCHEN,Open Door Baptist Church,2314-16 N. 26th St,Philadelphia,PA,19121,,,,,,,,,11:00,14:00,,,,,,
-SOUP_KITCHEN,Our Mother of Sorrows,1030 N. 48th St,Philadelphia,PA,19131,,,,,11:00,12:30,11:00,12:30,11:00,12:30,,,,,,
-SOUP_KITCHEN,Philadelphia Brotherhood Rescue Mission,401 E. Girard Ave,Philadelphia,PA,19125,,,,,7:00,12:00,7:00,12:00,7:00,12:00,7:00,12:00,7:00,12:00,,
-SOUP_KITCHEN,"Poplar St AME Zion Church, Inc",5802 Musgrave St,Philadelphia,PA,19138,,,,,,,,,13:00,15:00,,,,,,
-SOUP_KITCHEN,Prayer and Faith Temple Church of God in Christ,1541-59 N. 61st St,Philadelphia,PA,19151,,,,,,,,,,,,,,,10:00,11:30
-SOUP_KITCHEN,Providence Baptist Church,87 E. Haines St,Philadelphia,PA,19144,,,,,,,,,,,11:00,12:15,,,,
-SOUP_KITCHEN,Second Pilgrim Baptist Church,554 N. 15th St,Philadelphia,PA,19130,,,,,,,10:00,14:00,,,17:00,19:00,,,,
-SOUP_KITCHEN,Sherwood Christian Outreach Center,5543 Willows Ave,Philadelphia,PA,19143,,,,,,,12:00,14:00,,,12:00,14:00,,,,
-SOUP_KITCHEN,Simmons Youth Mission,2225 Huntingdon St,Philadelphia,PA,19132,,,,,,,,,13:00,16:00,,,,,,
-SOUP_KITCHEN,St Frances Inn,2441 Kensington Ave,Philadelphia,PA,19125,,,,11:30-13:00,16:30,18:00,16:30,18:00,16:30,18:00,16:30,18:00,11:30,13:00,11:30,13:00
-SOUP_KITCHEN,St John's Hospice ,1221 Race St,Philadelphia,PA,19107,,,,,12:00,13:00,12:00,13:00,12:00,13:00,12:00,13:00,12:00,13:00,,
-SOUP_KITCHEN,Face to Face Germantown,109 E. Price St,Philadelphia,PA,19114,,,,12:30-13:45,12:30,13:45,,,,,,,12:30,13:45,12:30,13:45
-SOUP_KITCHEN,Sunday Breakfast Rescue Mission,302 N. 13th St,Philadelphia,PA,19107,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,Temple Presbyterian Church,1300 N. 7th St,Philadelphia,PA,19122,,,,,,,,,11:00,14:00,11:00,14:00,,,,
-SOUP_KITCHEN,Victory Shelter Programs,935 N. 42nd St,Philadelphia,PA,19104,,,,,,,,,10:00,12:00,,,,,,
-SOUP_KITCHEN,Church of the Living God,801 S. 11th St,Philadelphia,PA,19147,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,Word of Deliverance Fellowship Ministry,1500 Dickinson St,Philadelphia,PA,19146,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,Grace Baptist Church of Germantown,25 W. Johnson St,Philadelphia,PA,19144,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,The Welcome Church,7241 Germantown Ave,Philadelphia,PA,19119,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,Chosen 300,1116 Spring Garden St,Philadelphia,PA,19123,,,,10:00-12:00,18:00,20:00,,,18:00,20:00,,,18:00,20:00,17:00,19:00
-SOUP_KITCHEN,Philly Restart,19th St and Vine St,Philadelphia,PA,19103,,,,,16:00,17:00,,,,,,,,,,
-SOUP_KITCHEN,Liberti Church,123 S. 17th St,Philadelphia,PA,19110,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,The Word in Action,1539 W. Courtland St,Philadelphia,PA,19140,,,,,,,11:00,12:00,11:00,12:00,11:00,12:00,11:00,12:00,,
-SOUP_KITCHEN,Kingdom Empowerment International Ministries,7917 Temple Rd,Philadelphia,PA,19150,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,Beulah Baptist Church,5001-21 Spruce St,Philadelphia,PA,19139,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,Korean Philadelphia Church,1200 W. Chelthenham Ave,Philadelphia,PA,19126,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,Mighty Exploits Ministries,504 S Lansdowne Ave,Philadelphia,PA,19050,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,Transfiguration Baptist Church,3732 Fairmount Ave,Philadelphia,PA,19104,,,,,,,,,,,,,,,,
-SOUP_KITCHEN,Resurrection Baptist Church,1610 N. 54th St,Philadelphia,PA,19131,,,,,,,,,,,12:00,,,,,
-SOUP_KITCHEN,Camphor Memorial United Methodist Church,56thSt and Wyalusing Ave,Philadelphia,PA,19131,,,,,,,9:00,12:00,,,,,,,,
-SOUP_KITCHEN,Mt Tabor AME Church,961-71 N. 7th St,Philadelphia,PA,19123,,,,,12:00,,,,,,,,,,,
-SOUP_KITCHEN,Center for H.O.P.E.,901 N. Carlisle St,Philadelphia,PA,19130,,,,7:30-8:30,7:30,8:30,7:30,8:30,7:30,8:30,7:30,8:30,7:30,8:30,7:30,8:30
+Name,Address,City,State,Zip Code,SNAP,FMNP,Philly Food Bucks,Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday
+Greensgrow Farm Stand,2501 E. Cumberland Ave,Philadelphia,PA,19125,Yes,Yes,Yes,,,,,15:00-19:00,,10:00-15:00
+Rittenhouse,18th St and Walnut St,Philadelphia,PA,19103,Yes,Yes,,,,10:00-13:00,,,,09:00-15:00
+Broad and South,Broad St and South St,Philadelphia,PA,19147,Yes,Yes,Yes,,,,14:00-18:00,,,
+Schuylkill River Park,25th St and Spruce St,Philadelphia,PA,19103,,Yes,,,,,15:00-19:00,,,
+Fairmount,22nd St and Fairmount Ave,Philadelphia,PA,19130,Yes,Yes,Yes,,,,,15:00-19:00,,
+Suburban Station,16th St and JFK Blvd,Philadelphia,PA,19103,,Yes,,,,,12:00-18:30,,,
+Jefferson,10th St and Chestnut St,Philadelphia,PA,19107,Yes,Yes,,,,,,11:00-15:30,,
+Fitler Square Park,23rd St nd Pine St,Philadelphia,PA,19103,,Yes,,,,,,,,09:00-14:00
+Headhouse,2nd St and Lombard St,Philadelphia,PA,19147,Yes,Yes,Yes,10:00-14:00,,,,,,
+Federal Building ,20 N. 6th St,Philadelphia,PA,19106,Yes,,,10:00-14:00,,,,,,
+Reading Terminal Market,12th St and Arch St,Philadelphia,PA,19107,Yes,Yes,,9:00-17:00,08:00-18:00,08:00-18:00,08:00-18:00,08:00-18:00,08:00-18:00,08:00-18:00
+Fair Food Farmstand,51 N. 12th St,Philadelphia,PA,19107,Yes,,Yes,9:00-17:00,08:00-18:00,08:00-18:00,08:00-18:00,08:00-18:00,08:00-18:00,08:00-18:00
+SEPTA farm stand,1234 Market St,Philadelphia,PA,19107,,,,,,,11:00-13:30,,,
+N. 3rd St Market,Church St and 3rd St,Philadelphia,PA,19106,,,,,,14:00-19:00,,,,
+Parkway,16th St and Benjamin Franklin Pkwy,Philadelphia,PA,19103,Yes,Yes,,,,,,11:00-18:00,,
+Chew and E. Pleasant,Chew Ave and E. Pleasant Ave,Philadelphia,PA,19119,Yes,Yes,Yes,,,,14:00-18:00,,,
+Germantown,Germantown Ave and Walnut Ln,Philadelphia,PA,19144,Yes,Yes,Yes,,,,,,14:00-18:00,
+Germantown Kitchen Garden,215 E. Penn St,Philadelphia,PA,19144,Yes,Yes,,,,,16:00-19:00,,,09:00-13:00
+East Falls ,Kelly Dr and Ridge Ave,Philadelphia,PA,19129,Yes,Yes,,,,,,,,10:00-14:00
+Chestnut Hill Farmers' Market,Winston Rd and Germantown Ave,Philadelphia,PA,19118,,Yes,,,,,,,,09:30-13:30
+Weaver's Way Community Programs Farm Stand,8424 Germantown Ave,Philadelphia,PA,19118,,Yes,,,,15:00-18:00,,,,
+Broad and Mt. Vernon,Broad St and Mt. Vernon St ,Philadelphia,PA,19130,Yes,Yes,Yes,10:00-14:00,,,,,,
+Francisville,19th St and Fairmount Ave,Philadelphia,PA,19130,Yes,Yes,,,,,,,14:00-18:00,
+Girard and 27th ,27th St and Girard Ave,Philadelphia,PA,19130,,Yes,,,,,,,,10:00-13:00
+8th & Poplar,8th St and Poplar St,Philadelphia,PA,19123,Yes,Yes,,,,,15:00-18:00,,,
+Liberty Lands Park,3rd St and Poplar St ,Philadelphia,PA,19123,Yes,Yes,Yes,,,,,15:00-19:00,,
+Oxford Circle,900 East Howell St,Philadelphia,PA,19149,Yes,Yes,Yes,,,,,14:00-18:00,,
+Cecil B. Moore,Cecil B. Moore Ave and 13th St,Philadelphia,PA,19122,Yes,Yes,Yes,,,,,14:00-18:00,,
+Hunting Park,W. Hunting Park Ave and Old York Ave,Philadelphia,PA,19140,Yes,Yes,Yes,,,,,,,10:00-14:00
+Olney Transportation Center ,Broad St and Olney Ave,Philadelphia,PA,19141,Yes,Yes,Yes,,,14:00-18:00,,,,
+4th and Lehigh ,4th St and Lehigh Ave,Philadelphia,PA,19133,Yes,Yes,Yes,,,13:00-17:00,,,,
+33rd and Diamond,33rd St and Diamond Sts,Philadelphia,PA,19121,Yes,Yes,Yes,,,14:00-18:00,,,,
+East Park Revitalization Alliance,Ridge Ave and Natrona St,Philadelphia,PA,19132,,Yes,,,,,15:00-18:00,,,
+SHARE Nice Roots Farm,2901 W. Hunting Park Ave,Philadelphia,PA,19129,Yes,Yes,Yes,,,14:00-16:00,,14:00-16:00,,
+26th and Allegheny,26th St and Allegheny Ave,Philadelphia,PA,19129,Yes,Yes,Yes,,,,13:00-17:00,,,
+Frankford Transportation Center ,Frankford and Bustleton Ave,Philadelphia,PA,19124,Yes,Yes,Yes,,,14:00-18:00,,,,
+Mayfair,Frankford Ave and Ryan Ave,Philadelphia,PA,19149,,,,10:00-14:00,,,,,,
+Parkwood,Byberry Rd and Barbary Rd,Philadelphia,PA,19154,Yes,Yes,Yes,,,,,,,10:00-14:00
+New Foundations Charter School,8001 Torresdale Ave,Philadelphia,PA,19136,Yes,Yes,,,,,,,,
+Henry Got Crops!,7100 Henry Ave,Philadelphia,PA,19129,,Yes,,,,14:00-19:00,,,14:00-19:00,
+Mt. Airy ,Carpenter Ln and Greene St,Philadelphia,PA,19119,,Yes,,,,,,14:30-18:30,,
+Grumblethorpe House,5267 Germantown Ave,Philadelphia,PA,19144,Yes,Yes,,,,,,,,09:30-13:30
+Wadsworth ,E. Wadsworth Ave and Bayard St.,Philadelphia,PA,19150,Yes,Yes,,,,,,,10:00-14:00,
+West Oak Lane,Ogontz Ave and 72nd Ave,Philadelphia,PA,19138,Yes,Yes,Yes,,,14:00-18:00,,,,
+Gorgas Park,Ridge Ave and Acorn St,Philadelphia,PA,19128,Yes,Yes,,,,,,,14:00-18:00,
+Pretzel Park,4300 Silverwood St,Philadelphia,PA,19127,,,,,,,,,14:00-18:00,
+18th and Christian,18th St and Christian St,Philadelphia,PA,19146,Yes,Yes,Yes,,,,15:00-19:00,,,
+Broad and Snyder,Broad St and Snyder St,Philadelphia,PA,19148,Yes,Yes,Yes,,,14:00-18:00,,,,
+Fountain,11th St and Tasker St,Philadelphia,PA,19147,Yes,Yes,,,,,15:00-19:00,,,
+Dickinson Square,East Moyamensing St and Morris St,Philadelphia,PA,19148,Yes,Yes,Yes,10:00-14:00,,,,,,
+29th & Wharton,29th St and Wharton St,Philadelphia,PA,19146,Yes,Yes,Yes,,,14:00-18:00,,,,
+22nd & Tasker,22nd St and Tasker St,Philadelphia,PA,19146,Yes,Yes,Yes,,,14:00-18:00,,,,
+Farm 51,51st St and Chester Ave,Philadelphia,PA,19143,Yes,,,,,,,16:30-19:00,,
+Bartram's Farm Market,54th St and Lindbergh Blvd,Philadelphia,PA,19143,Yes,Yes,,,,,,15:30-18:30,,
+58th & Chester,58th St and Chester St,Philadelphia,PA,19143,Yes,Yes,Yes,,,,14:00-18:00,,,
+Earthskeepers,5100 Kingsessing Ave,Philadelphia,PA,19143,,,,,09:00-14:00,09:00-14:00,09:00-14:00,09:00-14:00,,
+71st and Woodland,71st St and Woodland Ave,Philadelphia,PA,19142,Yes,Yes,Yes,,,,,,,
+52nd & Haverford,52nd St and Haverford Ave,Philadelphia,PA,19139,Yes,Yes,Yes,,,,13:00-17:00,,13:00-17:00,
+Clark Park,43rd St and Baltimore Ave,Philadelphia,PA,19104,Yes,Yes,Yes,,,,,15:00-19:00,,10:00-14:00
+Greensgrow West Farm Stand,4912 Baltimore Ave,Philadelphia,PA,19143,Yes,Yes,,,,,,,15:00-18:00,
+Overbrook Farms,Lancaster Ave and City Ave,Philadelphia,PA,19151,Yes,Yes,Yes,,,,,,,09:00-13:00
+Heritage Farm ,4300 Monument Rd,Philadelphia,PA,19131,Yes,Yes,,,,,,15:00-18:00,,
+University Square,36th St and Walnut St,Philadelphia,PA,19104,Yes,Yes,,,,,10:00-15:00,,,
+Mill Creek Farm,Brown St and N 49th St,Philadelphia,PA,19139,Yes,Yes,Yes,,,,,,,11:00-14:00
+Drexel University,32nd St and Chestnut St,Philadelphia,PA,19104,Yes,Yes,,,,11:00-15:00,,,,
+Lancaster Ave,Lancaster Ave and Powelton St,Philadelphia,PA,19104,Yes,Yes,Yes,,,,,,,10:00-16:00
+Urban Tree Harvest ,53rd St and Poplar St,Philadelphia,PA,19131,Yes,Yes,,,,,,,,10:00-14:00
+Walnut Hill,4610 Market St,Philadelphia,PA,19139,Yes,Yes,,,,,,,16:00-19:00,
+Bright Hope Baptist Church ,12th St and Cecil B. Moore Ave,Philadelphia,PA,19122,,,,,18:00-19:15,18:00-19:15,18:00-19:15,18:00-19:15,,11:00-12:00
+Church of The Advocate,2121 N. Gratz St,Philadelphia,PA,19121,,,,,12:00-15:00,10:00-14:00,12:00-15:00,12:00-15:00,12:00-15:00,
+First African Presbyterian Church  ,4159 W Girard Ave,Philadelphia,PA,19104,,,,,,,12:00-14:00,,,
+Genesis Ministries,2229 N. Cleveland St,Philadelphia,PA,19132,,,,,,11:00-14:00,11:00-14:00,11:00-14:00,,
+Harambee Baptist Church ,5648 Chew Ave,Philadelphia,PA,19138,,,,,,12:30-15:30,12:30-15:30,12:30-15:30,,
+Holsey Temple ,5305-15 Germantown Ave,Philadelphia,PA,19144,,,,8:30-9:30,,11:00-13:00,,,,
+Iglesia Cristiana Avivamiento,541 E. Cambria St,Philadelphia,PA,19134,,,,,12:00-15:00,12:00-15:00,12:00-15:00,12:00-15:00,12:00-15:00,
+Lombard Central Presbyterian Church ,4201 Powelton Ave,Philadelphia,PA,19104,,,,,,08:00-11:00,08:00-11:00,08:00-11:00,08:00-11:00,
+Memorial Tabernacle Baptist Church,2249 Hunting Park Ave,Philadelphia,PA,19140,,,,,10:00-13:00,,10:00-14:00,,,
+Miller Memorial Baptist Church,1518 N. 22nd St,Philadelphia,PA,19121,,,,,,,,12:00-13:30,,
+Monumental Baptist Church,4948 Locust St,Philadelphia,PA,19139,,,,,,,12:00-13:00,,,
+Mt. Tabor Baptist Church,110 W. Rittenhouse St,Philadelphia,PA,19144,,,,,,,,12:00-13:00,,
+Mt. Zion Baptist Church ,41 W. Rittenhouse St,Philadelphia,PA,19144,,,,,,,12:00-13:00,,,
+Mt. Olive Holy Temple ,1469 N. Broad St,Philadelphia,PA,19122,,,,14:00-15:00,,13:00-14:00,,,,
+New Jerusalem CDC,14 E. Clapier St,Philadelphia,PA,19144,,,,,,,,,13:00-15:00,
+Open Door Baptist Church,2314-16 N. 26th St,Philadelphia,PA,19121,,,,,,,11:00-14:00,,,
+Our Mother of Sorrows,1030 N. 48th St,Philadelphia,PA,19131,,,,,11:00-12:30,11:00-12:30,11:00-12:30,,,
+Philadelphia Brotherhood Rescue Mission,401 E. Girard Ave,Philadelphia,PA,19125,,,,,07:00-12:00,07:00-12:00,07:00-12:00,07:00-12:00,07:00-12:00,
+"Poplar St AME Zion Church, Inc",5802 Musgrave St,Philadelphia,PA,19138,,,,,,,13:00-15:00,,,
+Prayer and Faith Temple Church of God in Christ,1541-59 N. 61st St,Philadelphia,PA,19151,,,,,,,,,,10:00-11:30
+Providence Baptist Church,87 E. Haines St,Philadelphia,PA,19144,,,,,,,,11:00-12:15,,
+Second Pilgrim Baptist Church,554 N. 15th St,Philadelphia,PA,19130,,,,,,10:00-14:00,,17:00-19:00,,
+Sherwood Christian Outreach Center,5543 Willows Ave,Philadelphia,PA,19143,,,,,,12:00-14:00,,12:00-14:00,,
+Simmons Youth Mission,2225 Huntingdon St,Philadelphia,PA,19132,,,,,,,13:00-16:00,,,
+St Frances Inn,2441 Kensington Ave,Philadelphia,PA,19125,,,,11:30-13:00,16:30-18:00,16:30-18:00,16:30-18:00,16:30-18:00,11:30-13:00,11:30-13:00
+St John's Hospice ,1221 Race St,Philadelphia,PA,19107,,,,,12:00-13:00,12:00-13:00,12:00-13:00,12:00-13:00,12:00-13:00,
+Face to Face Germantown,109 E. Price St,Philadelphia,PA,19114,,,,12:30-13:45,12:30-13:45,,,,12:30-13:45,12:30-13:45
+Sunday Breakfast Rescue Mission,302 N. 13th St,Philadelphia,PA,19107,,,,,,,,,,
+Temple Presbyterian Church,1300 N. 7th St,Philadelphia,PA,19122,,,,,,,11:00-14:00,11:00-14:00,,
+Victory Shelter Programs,935 N. 42nd St,Philadelphia,PA,19104,,,,,,,10:00-12:00,,,
+Church of the Living God,801 S. 11th St,Philadelphia,PA,19147,,,,,,,,,,
+Word of Deliverance Fellowship Ministry,1500 Dickinson St,Philadelphia,PA,19146,,,,,,,,,,
+Grace Baptist Church of Germantown,25 W. Johnson St,Philadelphia,PA,19144,,,,,,,,,,
+The Welcome Church,7241 Germantown Ave,Philadelphia,PA,19119,,,,,,,,,,
+Chosen 300,1116 Spring Garden St,Philadelphia,PA,19123,,,,10:00-12:00,18:00-20:00,,18:00-20:00,,18:00-20:00,17:00-19:00
+Philly Restart,19th St and Vine St,Philadelphia,PA,19103,,,,,16:00-17:00,,,,,
+Liberti Church,123 S. 17th St,Philadelphia,PA,19110,,,,,,,,,,
+The Word in Action,1539 W. Courtland St,Philadelphia,PA,19140,,,,,,11:00-12:00,11:00-12:00,11:00-12:00,11:00-12:00,
+Kingdom Empowerment International Ministries,7917 Temple Rd,Philadelphia,PA,19150,,,,,,,,,,
+Beulah Baptist Church,5001-21 Spruce St,Philadelphia,PA,19139,,,,,,,,,,
+Korean Philadelphia Church,1200 W. Chelthenham Ave,Philadelphia,PA,19126,,,,,,,,,,
+Mighty Exploits Ministries,504 S Lansdowne Ave,Philadelphia,PA,19050,,,,,,,,,,
+Transfiguration Baptist Church,3732 Fairmount Ave,Philadelphia,PA,19104,,,,,,,,,,
+Resurrection Baptist Church,1610 N. 54th St,Philadelphia,PA,19131,,,,,,,,,,
+Camphor Memorial United Methodist Church,56thSt and Wyalusing Ave,Philadelphia,PA,19131,,,,,,09:00-12:00,,,,
+Mt Tabor AME Church,961-71 N. 7th St,Philadelphia,PA,19123,,,,,,,,,,
+Center for H.O.P.E.,901 N. Carlisle St,Philadelphia,PA,19130,,,,7:30-8:30,07:30-08:30,07:30-08:30,07:30-08:30,07:30-08:30,07:30-08:30,07:30-08:30
+,,,,,,,,,,,,#REF!,,
+,,,,,,,,,,,,#REF!,,
+,,,,,,,,,,#REF!,,#REF!,,
+,,,,,,,,,,#REF!,,#REF!,,
