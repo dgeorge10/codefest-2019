@@ -7,7 +7,6 @@ db.authenticate()
 	.then(() => console.log("Database connected"))
 	.catch(err => console.log(err))
 
-
 const app = express()
 
 //bodyParser setup
