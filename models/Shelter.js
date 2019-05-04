@@ -25,15 +25,6 @@ const Shelter = db.define('Shelters', {
     gender: {
         type: Sequelize.STRING
     },
-    day: {
-        type: Sequelize.STRING
-    },
-    timein: {
-        type: Sequelize.STRING
-    },
-    timeout: {
-        type: Sequelize.STRING
-    },
     beds: {
         type: Sequelize.STRING
     },
@@ -42,7 +33,28 @@ const Shelter = db.define('Shelters', {
     },
     registration: {
         type: Sequelize.STRING
-    }
+    },
+    monday: {
+        type: Sequelize.STRING
+    },
+    tuesday: {
+        type: Sequelize.STRING
+    },
+    wednesday: {
+        type: Sequelize.STRING
+    },
+    thursday: {
+        type: Sequelize.STRING
+    },
+    friday: {
+        type: Sequelize.STRING
+    },
+    saturday: {
+        type: Sequelize.STRING
+    },
+    sunday: {
+        type: Sequelize.STRING
+    },
 })
 
 module.exports = Shelter;
