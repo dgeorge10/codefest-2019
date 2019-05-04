@@ -13,6 +13,9 @@ router.get("/", (req,res) => {
 router.post("/", (req,res) => {
     let { name, address, city, state, zip, gender, day, timein, timeout, beds, ages_served, registration } = req.body;
 
+   if (!name || !address || !city || !state || !zip || !gender || !day || !timein || !timeout || !beds || !ages_served || !registration) {
+        res.send(400);
+    }
     const newShelter = shelter.build({
         name,
         address,
