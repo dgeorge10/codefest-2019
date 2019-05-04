@@ -27,7 +27,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/login", (req,res)=>{
 	res.sendFile(path.join(__dirname, "public/login.html"))
 })
-
+app.get("/logout", (req, res) => {
+	req.session.destroy();
+	res.status(200);
+	res.redirect("/");
+});
 app.get("/dashboard", (req,res) => {
 	res.sendFile(path.join(__dirname, "public/dashboard.html"))
 })

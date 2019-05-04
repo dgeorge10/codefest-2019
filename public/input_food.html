@@ -1,0 +1,175 @@
+ 	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Enter food Information</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <h1>Enter Food Bank Information</h1>
+
+  <form class="form-horizontal" action="/action_page.php">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodName">Name:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="foodName" placeholder="Enter food Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodAddress">Address:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="foodAddress" placeholder="Enter Address">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodCity">City:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="foodCity" placeholder="Enter City">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodState">State:</label>
+    <div class="col-sm-10"> 
+      <input type="text" class="form-control" id="foodState" placeholder="Enter State">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodZip">Zip Code:</label>
+    <div class="col-sm-10"> 
+      <input type="number" class="form-control" id="foodZip" placeholder="Enter Zip Code">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodSnap">SNAP:</label>
+    <div class="col-sm-10"> 
+    <div class="radio">
+      <label><input type="radio" name="foodSnap" checked>Yes</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="foodSnap">No</label>
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodFMNP">FMNP:</label>
+    <div class="col-sm-10"> 
+    <div class="radio">
+      <label><input type="radio" name="foodFMNP" checked>Yes</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="foodFMNP">No</label>
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodBucks">Philly Food Bucks:</label>
+    <div class="col-sm-10"> 
+    <div class="radio">
+      <label><input type="radio" name="foodBucks" checked>Yes</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="foodBucks">No</label>
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeInMonday">Monday Time In:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeInMonday" placeholder="Enter Time In">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeOutMonday">Monday Time Out:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeOutMonday" placeholder="Enter Time Out">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeInTuesday">Tuesday Time In:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeInTuesday" placeholder="Enter Time In">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeOutTuesday">Tuesday Time Out:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeOutTuesday" placeholder="Enter Time Out">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeInWednesday">Wednesday Time In:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeInWednesday" placeholder="Enter Time In">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeOutWednesday">Wednesday Time Out:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeOutWednesday" placeholder="Enter Time Out">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeInThursday">Thursday Time In:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeInThursday" placeholder="Enter Time In">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeOutThursday">Thursday Time Out:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeOutThursday" placeholder="Enter Time Out">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeInFriday">Friday Time In:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeInFriday" placeholder="Enter Time In">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeOutFriday">Friday Time Out:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeOutFriday" placeholder="Enter Time Out">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeInSaturday">Saturday Time In:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeInSaturday" placeholder="Enter Time In">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeOutSaturday">Saturday Time Out:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeOutSaturday" placeholder="Enter Time Out">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeInSunday">Sunday Time In:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeInSunday" placeholder="Enter Time In">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="foodTimeOutSunday">Sunday Time Out:</label>
+    <div class="col-sm-10"> 
+      <input type="time" class="form-control" id="foodTimeOutSunday" placeholder="Enter Time Out">
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+</div>
+
+</body>
+</html>

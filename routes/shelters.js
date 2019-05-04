@@ -12,7 +12,6 @@ router.get("/", (req,res) => {
 
 router.post("/", (req,res) => {
     let { name, address, city, state, zip, gender, day, timein, timeout, beds, ages_served, registration } = req.body;
-    console.log(req.body)
     if (!name || !address || !city || !state || !zip || !gender || !day || !timein || !timeout || !beds || !ages_served || !registration) {
         res.sendStatus(400);
     } else {

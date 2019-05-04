@@ -3,6 +3,10 @@ const db = require('../config/database')
 
 //model for a user
 const User = db.define('User', {
+    id:{
+        type: Sequelize.INTEGER,
+        primaryKey: true
+    },
     username:{
         type: Sequelize.STRING
     },

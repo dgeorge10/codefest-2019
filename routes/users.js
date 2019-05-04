@@ -24,9 +24,12 @@ router.post("/login", (req,res) => {
             }
         })
         .then(user => {
+            console.log(password, user)
             if(password == user.dataValues.password) {
                 req.session.loggedin = true;
                 res.redirect("./dashboard")
+            } else {
+                res.send("error logging in")
             }
         })
         .catch(err => console.log(err))
@@ -35,8 +38,7 @@ router.post("/login", (req,res) => {
 
 router.post("/register", (req,res) => {
     let { username, password, shelterName } = req.body;
-
-    if (!username || !password || !shelterName) {
+    if (!username || !password) {
         res.sendStatus(400);
     } else {
         let shelterId;
@@ -46,19 +48,22 @@ router.post("/register", (req,res) => {
             }
         })
         .then(shelter => {
-            console.log(shelter.dataValues.id)
             const newUser = user.build({
                 username,
                 password,
                 shelterId: shelter.id
             })
             newUser.save()
-            .then(() => res.send("user saved"))
+            .then(() => {
+                req.session.loggedin = true;
+                res.redirect("./dashboard")
+            })
             .catch((err) => console.log(err))
         })
         .catch(err => console.log(err))
     }
 })
+
 
 router.get("/dashboard", (req,res) => {
     if(req.session.loggedin){
@@ -66,7 +71,6 @@ router.get("/dashboard", (req,res) => {
     } else {
         res.send("not logged in")
     }
-    
 
 })
 
