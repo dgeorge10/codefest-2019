@@ -16,8 +16,15 @@ router.post("/", (req,res) => {
     if (!foodName || !foodAddress || !foodCity || !foodState || !foodZip || !foodSnap || !foodBucks || !foodFMNP) {
         res.sendStatus(400);
     } else {
+        let mondayTime = mondayTimeIn+"-"mondayTimeOut;
+        let tuesdayTime = tuesdayTimeIn+"-"tuesdayTimeOut;
+        let wednesdayTime = wednesdayTimeIn+"-"wednesdayTimeOut;
+        let thursdayTime = thursdayTimeIn+"-"thursdayTimeOut;
+        let fridayTime = fridayTimeIn+"-"fridayTimeOut;
+        let saturdayTime = saturdayTimeIn+"-"saturdayTimeOut;
+        let sundayTime = sundayTimeIn+"-"sundayTimeOut;
         const newfood = food.build({
-            name:foodName, address:foodAddress, city:foodCity, state:foodState, zip:foodZip, snap:foodSnap, fmnp:foodFMNP,mondayTimeIn, mondayTimeOut, tuesdayTimeIn, tuesdayTimeOut, wednesdayTimeIn, wednesdayTimeOut, thursdayTimeIn, thursdayTimeOut, fridayTimeIn, fridayTimeOut, saturdayTimeIn, saturdayTimeOut, sundayTimeIn, sundayTimeOut
+            name:foodName, address:foodAddress, city:foodCity, state:foodState, zip:foodZip, snap:foodSnap, fmnp:foodFMNP, mondayTime, tuesdayTime, wednesdayTime, thursdayTime, fridayTime, saturdayTime, sundayTime
         })
         newfood.save()
         .then(() => res.send("food saved"))

@@ -16,8 +16,15 @@ router.post("/", (req,res) => {
     if (!shelterName || !shelterAddress || !shelterCity || !shelterState || !shelterZip || !shelterAges || !shelterBed || !shelterType) {
         res.sendStatus(400);
     } else {
+        let mondayTime = mondayTimeIn+"-"mondayTimeOut;
+        let tuesdayTime = tuesdayTimeIn+"-"tuesdayTimeOut;
+        let wednesdayTime = wednesdayTimeIn+"-"wednesdayTimeOut;
+        let thursdayTime = thursdayTimeIn+"-"thursdayTimeOut;
+        let fridayTime = fridayTimeIn+"-"fridayTimeOut;
+        let saturdayTime = saturdayTimeIn+"-"saturdayTimeOut;
+        let sundayTime = sundayTimeIn+"-"sundayTimeOut;
         const newShelter = shelter.build({
-            name:shelterName, address:shelterAddress, city:shelterCity, state:shelterState, zip:shelterZip, gender:shelterType, beds:shelterBed, ages_served:shelterAges, registration:shelterRegistration,mondayTimeIn, mondayTimeOut, tuesdayTimeIn, tuesdayTimeOut, wednesdayTimeIn, wednesdayTimeOut, thursdayTimeIn, thursdayTimeOut, fridayTimeIn, fridayTimeOut, saturdayTimeIn, saturdayTimeOut, sundayTimeIn, sundayTimeOut
+            name:shelterName, address:shelterAddress, city:shelterCity, state:shelterState, zip:shelterZip, gender:shelterType, beds:shelterBed, ages_served:shelterAges, registration:shelterRegistration, mondayTime, tuesdayTime, wednesdayTime, thursdayTime, fridayTime, saturdayTime, sundayTime
         })
         newShelter.save()
         .then(() => res.send("shelter saved"))
