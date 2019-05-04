@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 //routes
-app.use("/api", require("./routes/api"));
+app.use("/api/shelters", require("./routes/shelters"));
 
 //start on port 5000 or on whichever port the server allows
 const PORT = process.env.PORT || 5000;

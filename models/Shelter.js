@@ -2,7 +2,11 @@ const Sequelize = require('sequelize');
 const db = require('../config/database');
 
 //model for a user
-const Shelter = db.define('Shelter', {
+const Shelter = db.define('Shelters', {
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true
+    },
     name: {
         type: Sequelize.STRING
     },
@@ -39,7 +43,6 @@ const Shelter = db.define('Shelter', {
     registration: {
         type: Sequelize.STRING
     }
-
 })
 
 module.exports = Shelter;
