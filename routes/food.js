@@ -17,8 +17,7 @@ router.post("/", (req,res) => {
         res.sendStatus(400);
     } else {
         const newfood = food.build({
-            name, address, city, state, zip, gender, day, 
-            timein, timeout, beds, ages_served, registration
+            name:foodName, address:foodAddress, city:foodCity, state:foodState, zip:foodZip, snap:foodSnap, fmnp:foodFMNP,mondayTimeIn, mondayTimeOut, tuesdayTimeIn, tuesdayTimeOut, wednesdayTimeIn, wednesdayTimeOut, thursdayTimeIn, thursdayTimeOut, fridayTimeIn, fridayTimeOut, saturdayTimeIn, saturdayTimeOut, sundayTimeIn, sundayTimeOut
         })
         newfood.save()
         .then(() => res.send("food saved"))

@@ -25,9 +25,6 @@ const Shelter = db.define('Shelters', {
     gender: {
         type: Sequelize.STRING
     },
-    timeout: {
-        type: Sequelize.STRING
-    },
     beds: {
         type: Sequelize.STRING
     },
