@@ -1,19 +1,15 @@
-﻿NAME,PROVIDER,ADDRESS,CITY,STATE,ZIP,GENDER,TIME,NUMBER_OF_BEDS,AGES_SERVED,REGISTRATION,,
-Apple Tree Family Center,Office of Supportive Housing,1430 Cherry St,Philadelphia,PA,19102,Family/Women,MTWRF 7-3,,,,,
-Red Shield Family Residence,,715 N Broad St,Philadelphia,PA,19123,Family,,,,,,
-"House of Passage, Kirkbride Center",Office of Supportive Housing,111 N 49th St,Philadelphia,PA,19139,Women,,,,,,
-The Roosevelt Darby Center,,802 N Broad St,Philadelphia,PA,19130,Men ,,,18+,,,
-Station House,,2601 N Broad St,Philadelphia,PA,19132,Men ,,,18+,,,
-Sunday Breakfast Rescue Mission,,302 N 13th St,Philadelphia,PA,19107,Men ,,,18+,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-Welcome Center Lutheran Church of the Holy Communion,,2111 Sansom St,Philadelphia,PA,19103,Family/Men/Women,TF 12-4,,,,,
-Philadelphia Recovery Community Center (PRCC),,1701 W Lehigh Ave,Philadelphia,PA,19132,Family/Men/Women,MTRF 12-8,,,,,
-A New Life Recovery & Education Center,,3119 Spring Garden St,Philadelphia,PA,19104,Family/Men/Women,TWRFS 10-6,,,,,
-The Well,,"2709 N. Broad Street, 1st floor",Philadelphia,PA,19132,Family/Men/Women,MTWRF 9-5,,,,,
-St. Johnâ€™s Hospice,,1221 Race St,Philadelphia,PA,19107,Men,MTW,,,,,
-Mercy Hospice,,334 S 13th St,Philadelphia,PA,19108,Women,,,,,,
-The Perimeter (Veteran Services),,213-217 N 4th St,Philadelphia,PA,19106,Men/Women,MF 8-4,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
+﻿NAME,ADDRESS,CITY,STATE,ZIP,GENDER,DAY,TIME IN,TIME OUT,BEDS,AGES_SERVED,REGISTRATION
+Apple Tree Family Center,1430 Cherry St,Philadelphia,PA,19102,Family/Women,MTWRF,7am,5pm,,All,WALKIN
+Red Shield Family Residence,715 N Broad St,Philadelphia,PA,19123,Family,MTWRFSU,5pm,8am,,All,WALKIN
+"House of Passage, Kirkbride Center",111 N 49th St,Philadelphia,PA,19139,Women,MTWRFSU,5pm,8am,,18+,WALKIN
+The Roosevelt Darby Center,802 N Broad St,Philadelphia,PA,19130,Men ,MTWRF,7am,5pm,,18+,WALKIN
+Station House,2601 N Broad St,Philadelphia,PA,19132,Men ,MTWRFSU,5pm,8am,,18+,WALKIN
+Sunday Breakfast Rescue Mission,302 N 13th St,Philadelphia,PA,19107,Men ,MTWRFSU,5pm,8am,,18+,WALKIN
+Welcome Center Lutheran Church of the Holy Communion,2111 Sansom St,Philadelphia,PA,19103,Family/Men/Women,TF,12pm,4pm,,All,WALKIN
+Philadelphia Recovery Community Center (PRCC),1701 W Lehigh Ave,Philadelphia,PA,19132,Family/Men/Women,MTRF,12pm,8pm,,All,WALKIN
+A New Life Recovery & Education Center,3119 Spring Garden St,Philadelphia,PA,19104,Family/Men/Women,TWRFS,10am,6pm,,All,WALKIN
+The Well,"2709 N. Broad Street, 1st floor",Philadelphia,PA,19132,Family/Men/Women,MTWRF,9am,5pm,,All,WALKIN
+St. John's Hospice,1221 Race St,Philadelphia,PA,19107,Men,MTW,9pm,7am,,18+,WALKIN
+Mercy Hospice,334 S 13th St,Philadelphia,PA,19108,Women,MTWRFSU,5pm,8am,,18+,WALKIN
+The Perimeter (Veteran Services),213-217 N 4th St,Philadelphia,PA,19106,Men/Women,MF,8am,4pm,,18+,WALKIN
+Salavation Army Red Shield Family Residence,15 N. Broad Street,Philadelphia,PA,19123,Families,MTWRFSU,5pm,8am,,All,WALKIN
