@@ -6,9 +6,9 @@ const user = require("../models/User")
 const shelter = require("../models/Shelter")
 
 router.get("/", (req,res) => {
-    // user.findAll()
-    // .then(users => res.send(users))
-    // .catch(err => console.log(err))
+    user.findAll()
+        .then(users => res.send(users))
+        .catch(err => console.log(err))
     res.sendStatus(0)
 });
 
@@ -24,13 +24,17 @@ router.post("/login", (req,res) => {
             }
         })
         .then(user => {
-            console.log(password, user)
-            if(password == user.dataValues.password) {
-                req.session.loggedin = true;
-                res.redirect("./dashboard")
+            if(user) {
+                if(password == user.dataValues.password) {
+                    req.session.loggedin = true;
+                    res.redirect("./dashboard")
+                } else {
+                    res.send("error logging in")
+                }
             } else {
-                res.send("error logging in")
+                res.send("no user with that email")
             }
+            
         })
         .catch(err => console.log(err))
     }
@@ -64,10 +68,9 @@ router.post("/register", (req,res) => {
     }
 })
 
-
 router.get("/dashboard", (req,res) => {
     if(req.session.loggedin){
-        res.sendFile(path.join(__dirname, "../public/dashboard.html"))
+        res.sendFile(path.join(__dirname, "../public/input_shelter.html"))
     } else {
         res.send("not logged in")
     }
