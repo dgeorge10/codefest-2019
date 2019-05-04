@@ -1,4 +1,4 @@
-ID,NAME,ADDRESS,CITY,STATE,ZIP,GENDER,Monday,Tuesday,Wednesday,Thursday,Firday,Saturday,Sunday,BEDS,AGES_SERVED,REGISTRATION,Lat,Lon
+id,name,address,city,state,zip,gender,monday,tuesday,wednesday,thursday,firday,saturday,sunday,beds,ages_served,registration,lat,lon
 1,"House of Passage Kirkbride Center",111 N 49th St,Philadelphia,PA,19139,Women,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,,18+,WALKIN,39.9617037,-75.2184789
 2,St. John's Hospice,1221 Race St,Philadelphia,PA,19107,Men,21:00-7:00,21:00-7:00,21:00-7:00,,,,,,18+,WALKIN,39.9561156,-75.159942
 3,Apple Tree Family Center,1430 Cherry St,Philadelphia,PA,19102,Family/Women,7:00-17:00,7:00-17:00,7:00-17:00,7:00-17:00,7:00-17:00,,,,All,WALKIN,39.9553612,-75.1642513
