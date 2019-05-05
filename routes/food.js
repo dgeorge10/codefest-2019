@@ -40,7 +40,7 @@ router.post("/", (req,res) => {
         })
         newfood.save()
         .then(() => {
-            calendar.addEvent(newShelter.dataValues);
+            // calendar.addEvent(newShelter.dataValues);
             res.sendFile(path.join(__dirname, "../public/cal/index.html"))
         })
         .catch((err) => console.log(err))
