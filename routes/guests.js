@@ -12,10 +12,11 @@ router.get("/", (req,res) => {
     .catch(err => console.log(err))
 });
 
-router.delete("/:number", (req,res) => {
+router.delete("/remove", (req,res) => {
+    let { number } = req.body;
     guest.destroy({
         where: {
-            number: req.params["number"]
+            number: number
         }
     })
     .then(guest => res.send(guest))
