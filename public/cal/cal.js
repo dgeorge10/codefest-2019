@@ -7,6 +7,11 @@ function parseJSON(text) {
             allEvents.push.apply(allEvents, parseObjToEvent(food[0][obj]));
         }
     }
+    for (obj in food[1]) {
+        if (obj != null) {
+            allEvents.push.apply(allEvents, parseObjToEvent(food[1][obj]));
+        }
+    }
     return allEvents;
 }
 

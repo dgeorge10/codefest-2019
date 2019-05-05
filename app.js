@@ -76,8 +76,6 @@ app.get("/calendar", (req,res)=>{
 app.get("/allEvents", (req,res)=>{
 	let { start, end } = req.query;
 	
-	console.log(start,end)
-	
 	let response = [];
 	food.findAll({raw: true})
 	.then(foods => {
