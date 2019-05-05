@@ -12,6 +12,17 @@ router.get("/", (req,res) => {
     .catch(err => console.log(err))
 });
 
+router.post("/find", (req,res) => {
+    let { number } = req.body;
+    guest.findAll({
+        where: {
+            number: number
+        }
+    })
+    .then(guest => res.send(guest))
+    .catch(err => console.log(err))
+});
+
 router.delete("/remove", (req,res) => {
     let { number } = req.body;
     guest.destroy({
