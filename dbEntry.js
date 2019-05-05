@@ -1,35 +1,22 @@
+// var temp = JSON.parse('{"id":2,"name":"Face to Face Germantown","address":"109 E. Price St","city":"Philadelphia","state":"PA","zip":19114,"snap":"","fmnp":"","bucks":"","monday":"12:30-13:45","tuesday":"","wednesday":"","thursday":"","friday":"12:30-13:45","saturday":"12:30-13:45","sunday":"12:30-13:45","createdAt":null,"updatedAt":null}');
+// console.log(temp);
+// console.log(parseDbEvent(temp));
+
+
 function parseDbEvent(dbEntry) {
 
 	let allEvents = [];
 
 	let days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
-
-	if ("gender" in dbEntry) {
-		if (dbEntry["gender"].toLowerCase().includes("family")) {
-			calCategory = "family";
-		} else if (dbEntry["gender"].toLowerCase().includes("women")) {
-			calCategory = "women";
-		} else if (dbEntry["gender"].toLowerCase().includes("men")) {
-			calCategory = "men"
-		} else {
-			calCategory = null;
-		}
-	} else {
-		if (dbEntry["snap"].toLowerCase() == "yes") {
-			calCategory = "snap";
-		} else if (dbEntry["fmnp"].toLowerCase() == "yes") {
-			calCategory = "fmnp";
-		} else if (dbEntry["bucks"].toLowerCase() == "yes") {
-			calCategory = "bucks";
-		}
-	}
+	let calCategory = "";
 
 	for (day in days) {
-		if (day in dbEntry) {
-			let temp = parseDay(dbEntry, day);
+		if (days[day] in dbEntry) {
+			console.log("day");
+			let res = parseDay(dbEntry, days[day]);
 			var event = {
-		      'summary': 'Google I/O 2015',
-		      'location': dbEntry.address + " " + dbEntry.city + " " + dbEntry.state + " " + db.zip,
+		      'summary': getType(dbEntry),
+		      'location': dbEntry.address + " " + dbEntry.city + " " + dbEntry.state + " " + dbEntry.zip,
 		      'description': dbEntry.name,
 		      'start': {
 		        'dateTime': res[0],
@@ -91,4 +78,28 @@ function parseDay(dbEntry, day) {
 		}
 	}
 	return res;
+}
+
+function getType(dbEntry) {
+	if ("gender" in dbEntry) {
+		if (dbEntry["gender"].toLowerCase().includes("family")) {
+			return "family";
+		} else if (dbEntry["gender"].toLowerCase().includes("women")) {
+			return "women";
+		} else if (dbEntry["gender"].toLowerCase().includes("men")) {
+			return "men";
+		} else {
+			return "shelter";
+		}
+	} else {
+		if (dbEntry["snap"].toLowerCase() == "yes") {
+			return "snap";
+		} else if (dbEntry["fmnp"].toLowerCase() == "yes") {
+			return "fmnp";
+		} else if (dbEntry["bucks"].toLowerCase() == "yes") {
+			return "bucks";
+		} else {
+			return "food";
+		}
+	}
 }
