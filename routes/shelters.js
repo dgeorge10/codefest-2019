@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
+const calendar = require("../public/cal/index");
+const shelter = require("../models/Shelter");
+const path = require("path");
+const sequelize = require("sequelize")
 
-const shelter = require("../models/Shelter")
 
 router.get("/", (req,res) => {
     shelter.findAll()
@@ -27,7 +30,10 @@ router.post("/", (req,res) => {
             name:shelterName, address:shelterAddress, city:shelterCity, state:shelterState, zip:shelterZip, gender:shelterType, beds:shelterBed, ages_served:shelterAges, registration:shelterRegistration, mondayTime, tuesdayTime, wednesdayTime, thursdayTime, fridayTime, saturdayTime, sundayTime
         })
         newShelter.save()
-        .then(() => res.send("shelter saved"))
+        .then(() => {
+            calendar.addEvent(newShelter);
+            res.sendFile(path.join(__dirname, "../public/cal/index.html"))
+        })
         .catch((err) => console.log(err))
     }
 });
@@ -39,7 +45,6 @@ function concatTime(start, end){
         return ""
     }
 }
-
 
 router.get("/:id", (req,res) => {
     let { id } = req.params;
