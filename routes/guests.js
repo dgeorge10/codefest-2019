@@ -25,7 +25,7 @@ router.get("/:number", (req,res) => {
 router.get("/men", (req,res) => {
     guest.findAll({
         where: {
-            gender: "male"
+            gender: "M"
         }
     })
     .then(guest => res.send(guest))
@@ -35,7 +35,7 @@ router.get("/men", (req,res) => {
 router.get("/women", (req,res) => {
     guest.findAll({
         where: {
-            gender: "female"
+            gender: "F"
         }
     })
     .then(guest => res.send(guest))
