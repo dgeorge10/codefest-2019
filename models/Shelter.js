@@ -55,6 +55,12 @@ const Shelter = db.define('Shelters', {
     sunday: {
         type: Sequelize.STRING
     },
+    lat: {
+      type: Sequelize.DOUBLE
+    },
+    lon: {
+      type: Sequelize.DOUBLE
+    }
 })
 
 module.exports = Shelter;
