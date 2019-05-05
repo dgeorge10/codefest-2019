@@ -44,10 +44,10 @@ function addEntry(map, entry, markers, color) {
 
 function fillData(map) {
   $.ajax({
-    url: "/api/food",
+    url: "/api/food/all",
     success: (foodData) => {
       $.ajax({
-        url: "api/shelters",
+        url: "api/shelters/all",
         success: (shelterData) => {
           markers = [];
           for(entry of foodData) {
