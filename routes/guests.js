@@ -55,7 +55,7 @@ router.get("/families", (req,res) => {
 });
 
 router.post("/", (req,res) => {
-   let { number,  gender, dependents } = req.body;
+   let { number, gender, dependents } = req.body;
 
    if(!number || !gender || !dependents ){
        res.send(400)
