@@ -43,7 +43,7 @@ router.post("/", (req,res) => {
         newShelter.save()
         .then(() => {
            // calendar.addEvent(newShelter.dataValues);
-            res.sendFile(path.join(__dirname, "../public/cal/index.html"))
+            res.sendFile(path.join(__dirname, "../public/index.html"))
         })
         .catch((err) => console.log(err))
     }
