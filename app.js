@@ -4,6 +4,8 @@ const path = require("path");
 const fs = require("fs")
 const bodyParser = require("body-parser");
 var session = require("express-session");
+require('dotenv').config()
+
 
 const food = require("./models/Food");
 const shelter = require("./models/Shelter");
