@@ -8,7 +8,7 @@
 <script>
 	function getShelters() {
 		$.ajax({
-			url: "http://codefest-2019.herokuapp.com/api/shelters",
+			url: "http://codefest-2019.herokuapp.com/api/shelters/all",
 			type: "GET",
 			success: function(data) {
 				let content="<select name='shelterName'>";
