@@ -52,6 +52,12 @@ const Food = db.define('Food', {
     sunday: {
         type: Sequelize.STRING
     },
+    lat: {
+      type: Sequelize.DOUBLE
+    },
+    lon: {
+      type: Sequelize.DOUBLE
+    }
 })
 
 module.exports = Food;
