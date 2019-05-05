@@ -198,21 +198,21 @@ function parseDay(dbEntry, day) {
 function getType(dbEntry) {
 	if ("gender" in dbEntry) {
 		if (dbEntry["gender"].toLowerCase().includes("family")) {
-			return "family";
+			return "iqjog2vhjr0tj6lmtag815ah74@group.calendar.google.com";
 		} else if (dbEntry["gender"].toLowerCase().includes("women")) {
-			return "women";
+			return "vjbftfnm7j3gma0shlbtntr00s@group.calendar.google.com";
 		} else if (dbEntry["gender"].toLowerCase().includes("men")) {
-			return "men";
+			return "nagi7us980ngqo735vj372bqro@group.calendar.google.com";
 		} else {
 			return "shelter";
 		}
 	} else {
 		if (dbEntry["snap"].toLowerCase() == "yes") {
-			return "snap";
+			return "oetdrbs4o04gcv384p2bir5d7s@group.calendar.google.com";
 		} else if (dbEntry["fmnp"].toLowerCase() == "yes") {
-			return "fmnp";
+			return "nkcdn48ouljuscfc2euve49lls@group.calendar.google.com";
 		} else if (dbEntry["bucks"].toLowerCase() == "yes") {
-			return "bucks";
+			return "1t01j56s9v42cscl0jdneikdis@group.calendar.google.com";
 		} else {
 			return "food";
 		}
