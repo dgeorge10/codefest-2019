@@ -24,7 +24,7 @@ router.post("/", (req,res) => {
         let saturdayTime = concatTime(saturdayTimeIn,saturdayTimeOut);
         let sundayTime = concatTime(sundayTimeIn,sundayTimeOut);
         const newfood = food.build({
-            name:foodName, address:foodAddress, city:foodCity, state:foodState, zip:foodZip, snap:foodSnap, fmnp:foodFMNP, mondayTime, tuesdayTime, wednesdayTime, thursdayTime, fridayTime, saturdayTime, sundayTime
+            name:foodName, address:foodAddress, city:foodCity, state:foodState, zip:foodZip, snap:foodSnap, fmnp:foodFMNP, monday:mondayTime, tuesday:tuesdayTime, wednesday:wednesdayTime, thursday:thursdayTime, friday:fridayTime, saturday:saturdayTime, sunday:sundayTime
         })
         newfood.save()
         .then(() => {

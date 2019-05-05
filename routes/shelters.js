@@ -27,11 +27,11 @@ router.post("/", (req,res) => {
         let saturdayTime = concatTime(saturdayTimeIn,saturdayTimeOut);
         let sundayTime = concatTime(sundayTimeIn,sundayTimeOut);
         const newShelter = shelter.build({
-            name:shelterName, address:shelterAddress, city:shelterCity, state:shelterState, zip:shelterZip, gender:shelterType, beds:shelterBed, ages_served:shelterAges, registration:shelterRegistration, mondayTime, tuesdayTime, wednesdayTime, thursdayTime, fridayTime, saturdayTime, sundayTime
+            name:shelterName, address:shelterAddress, city:shelterCity, state:shelterState, zip:shelterZip, gender:shelterType, beds:shelterBed, ages_served:shelterAges, registration:shelterRegistration, monday:mondayTime, tuesday:tuesdayTime, wednesday:wednesdayTime, thursday:thursdayTime, friday:fridayTime, saturday:saturdayTime, sunday:sundayTime
         })
         newShelter.save()
         .then(() => {
-            calendar.addEvent(newShelter.dataValues,);
+            calendar.addEvent(newShelter.dataValues);
             res.sendFile(path.join(__dirname, "../public/cal/index.html"))
         })
         .catch((err) => console.log(err))
