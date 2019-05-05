@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
@@ -52,46 +51,4 @@ router.get("/:id", (req,res) => {
     .catch(err => console.log(err))
 });
 
-=======
-const express = require('express');
-const router = express.Router();
-const db = require('../config/database');
-
-const food = require("../models/Food")
-
-router.get("/", (req,res) => {
-    food.findAll()
-    .then(food => res.send(food))
-    .catch(err => console.log(err))
-});
-
-router.post("/", (req,res) => {
-    let { name, address, city, state, zip, gender, day, timein, timeout, beds, ages_served, registration, lat, lon } = req.body;
-    console.log(req.body)
-    if (!name || !address || !city || !state || !zip || !gender || !day || !timein || !timeout || !beds || !ages_served || !registration || !lat || !lon) {
-        res.sendStatus(400);
-    } else {
-        const newFood = food.build({
-            name,
-            address,
-            city,
-            state,
-            zip,
-            gender,
-            day,
-            timein,
-            timeout,
-            beds,
-            ages_served,
-            registration,
-            lat,
-            lon
-        })
-        newFood.save()
-        .then(() => res.send("Food bank saved"))
-        .catch((err) => console.log(err))
-    }
-})
-
->>>>>>> Stashed changes
 module.exports = router;
