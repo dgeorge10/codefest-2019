@@ -8,7 +8,7 @@ router.get("/getCurrentDay", (req,res) => {
     var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
     var d = new Date();
     var day = days[d.getDay()];
-    db.query("SELECT name," + day + " from shelter.Food;")
+    db.query("SELECT name," + day + " from shelter.Food where (" + day + "!= '')")
     .then(food => {
         res.send(food)
     })
