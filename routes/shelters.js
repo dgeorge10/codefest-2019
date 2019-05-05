@@ -46,7 +46,7 @@ router.post("/", (req,res) => {
             res.sendFile(path.join(__dirname, "../public/index.html"))
         })
         .catch((err) => console.log(err))
-    }
+    } 
 });
 
 function concatTime(start, end){
