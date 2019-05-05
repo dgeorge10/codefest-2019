@@ -63,12 +63,9 @@ app.get("/shelter", (req,res)=>{
 	}
 });
 app.get("/calendar", (req,res)=>{
-	if(req.session.loggedin){
-		res.write(fs.readFileSync(__dirname + "/user/index.html"));
-		res.end();
-	} else {
-		res.redirect("/404.html")
-	}
+	res.write(fs.readFileSync(__dirname + "/public/cal/index.html"));
+	res.end();
+
 });
 
 //routes
