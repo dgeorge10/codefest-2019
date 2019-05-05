@@ -18,7 +18,7 @@
 				<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 						<div class="container">
 							<a class="navbar-brand" href="#">
-								<!-- <img src="../logo.png" height="40px" alt=""> -->
+								<img src="../logo.png" height="70px" alt="">
 							</a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
@@ -47,13 +47,13 @@
 						</div>
 					</nav>
 			
-				<div class="contiainer">
+				<div class="contiainer-fluid">
 					<div class="row">
 						<div class="col-md-6">
 							<div id="map"></div>
 						</div>
-						<div class="col-md-6">
-							
+						<div class="col-md-6 vert">
+							<div>
 							<div class="text-message">
 								<h4>TEXT YOUR GENDER AND NUMBER OF DEPENDENTS</h4>
 								<h2>TO <b>(215) 821-6634</b> FOR NOTIFICATIONS</h2>
@@ -139,9 +139,19 @@
 			</script>
 
 			<style>
+				.vert {
+					display: flex;
+					align-items: center;
+				}
+
+				.row {
+					height: calc(100% - 70px);
+					width: 100%;
+				}
+
 				.text-message {
 					text-align: center;
-					margin-top: 80px;
+					
 				}
 
 				.message-info {
