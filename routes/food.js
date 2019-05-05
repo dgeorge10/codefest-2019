@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
@@ -53,6 +54,8 @@ router.get("/:id", (req,res) => {
 });
 
 =======
+=======
+>>>>>>> Stashed changes
 const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
@@ -93,5 +96,8 @@ router.post("/", (req,res) => {
     }
 })
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 module.exports = router;
