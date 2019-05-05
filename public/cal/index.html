@@ -5,8 +5,12 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="/cal/frontend.js"></script>
+		<script type="text/javascript" src="fullcalendar/lib/moment.min.js"></script>
+		<script type="text/javascript" src="fullcalendar/lib/jquery.min.js"></script>
+		<script type="text/javascript" src="fullcalendar/fullcalendar.min.js"></script>
+		<link rel="stylesheet" href="fullcalendar/fullcalendar.min.css">
 		<!------ Include the above in your HEAD tag ---------->
-		<link href="./css/site.css" rel="stylesheet" >
+		<!-- <link href="./css/site.css" rel="stylesheet" > -->
 	</head>
 		<body>
 				<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -40,8 +44,16 @@
 							</div>
 						</div>
 					</nav>
-				
-						<div class="container register">
+	
+
+					<div class="container">			
+						<div class="row">
+							<div class="col-md-12">
+								<div id="calendar"></div>
+							</div>
+						</div>
+					</div>
+<!-- 						<div class="container register">
 							<div class="row">
 								<div class="col-md-12 col-lg-12">
 									<select class="selectpicker">
@@ -56,14 +68,14 @@
 										</optgroup>
 									</select>
 								</div>
-							</div>
+							</div> -->
 							
-							<div class="row">
+<!-- 							<div class="row">
 								<div style="width: 50%" class="col-md-12 col-lg-12" id="cal">
 										<iframe src="https://calendar.google.com/calendar/b/2/embed?height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;showTitle=0&amp;showNav=0&amp;showDate=1&amp;showTabs=1&amp;showCalendars=0&amp;showTz=0&amp;src=aXFqb2cydmhqcjB0ajZsbXRhZzgxNWFoNzRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=dmpiZnRmbm03ajNnbWEwc2hsYnRudHIwMHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=bmtjZG40OG91bGp1c2NmYzJldXZlNDlsbHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=bmFnaTd1czk4MG5ncW83MzV2ajM3MmJxcm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=MXQwMWo1NnM5djQyY3NjbDBqZG5laWtkaXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=b2V0ZHJiczRvMDRnY3YzODRwMmJpcjVkN3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%234285F4&amp;color=%23F4511E&amp;color=%238E24AA&amp;color=%23009688&amp;color=%23D81B60&amp;color=%23E67C73" style="border-width:0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
 								</div>
 							</div>
-						</div>
+						</div> -->
 				<style>
 					.row{
 							padding: 5px 0px;
@@ -81,5 +93,29 @@
 							text-align: center;
 						}
 				</style>	
+				<script>
+					
+
+
+					$('#calendar').fullCalendar({
+					    header: {
+					        left: 'prev,next today',
+					        center: 'title',
+					        right: 'month,agendaWeek,agendaDay,listWeek'
+					    },
+					    defaultDate: '2018-11-16',
+					    navLinks: true,
+					    eventLimit: true,
+					    eventSources: [
+					    	{
+					    		url: './allEvents',
+					    		method: 'GET',
+					    		failure: function() {
+					    			alert("ERROR");
+					    		}
+					    	}
+					    ]
+					});
+				</script>
 		</body>
 </html>

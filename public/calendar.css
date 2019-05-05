@@ -1,0 +1,65 @@
+#calendar {
+	background-color: white;
+}
+
+
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  #calendar a.fc-event {
+  	color: fff;
+  }
+
+  .popover-header {
+	  color: black; /* bootstrap default styles make it black. undo */
+   }
+
+  .fc-title, .fc-content .fc-time {
+  	color: white;
+  	text-align: center;
+  	font-weight: bold;
+  }
+
+	a {
+		text-decoration: none;
+		display: inline-block;
+		padding: 8px 16px;
+	}
+
+	a:hover {
+		background-color: #FFC600;
+		text-decoration: none;
+		color: black;
+	}
+
+	.previous {
+		background-color: #07294D;
+		color: white;
+	}
+
+	.next {
+		float: right;
+		background-color: #07294D;
+		color: white;
+	}
+
+	.round {
+		border-radius: 50%;
+	}
+
+	#arrow {
+	    height: 90%; 
+	    width:100%;
+	    display:flex;
+	    align-items: center;
+	    justify-content: center;
+	}
