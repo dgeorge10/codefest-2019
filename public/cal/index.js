@@ -102,7 +102,9 @@ function addEv(event) {
       });
 }
 
-  exports.addEvent = function(events) {
+  exports.addEvent = function(dbEntry) {
+
+    var events = parseDbEvent(dbEntry);
 
     fs.readFile('credentials.json', (err, content) => {
       if (err) return console.log('Error loading client secret file:', err);
