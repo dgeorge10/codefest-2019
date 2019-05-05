@@ -31,7 +31,7 @@ router.post("/", (req,res) => {
         })
         newShelter.save()
         .then(() => {
-            calendar.addEvent(newShelter.dataValue.id, "shelter");
+            calendar.addEvent(newShelter.dataValues,);
             res.sendFile(path.join(__dirname, "../public/cal/index.html"))
         })
         .catch((err) => console.log(err))
