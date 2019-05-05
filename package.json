@@ -31,8 +31,8 @@
     "express-session": "^1.16.1",
     "fullcalendar": "^3.10.0",
     "googleapis": "^39.2.0",
-    "nodemon": "^1.19.0",
     "mysql2": "^1.6.5",
+    "nodemon": "^1.19.0",
     "sequelize": "^5.8.4"
   }
 }
