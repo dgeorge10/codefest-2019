@@ -13,7 +13,6 @@ router.get("/getCurrentDay", (req,res) => {
     var day = days[d.getDay()];
     db.query("SELECT name,address," + day + " from shelter.Shelters where (" + day + "!='')", { type: sequelize.QueryTypes.SELECT })
     .then((shelters) => {
-        console.log(shelters)
         res.send(shelters)
     })
     .catch(err => console.log(err))
