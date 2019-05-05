@@ -32,4 +32,16 @@ router.post("/", (req,res) => {
     }
 });
 
+router.get("/:id", (req,res) => {
+    let { id } = req.params;
+    
+    food.findOne({
+        where:{
+            id
+        }
+    })
+    .then(row => res.send(row))
+    .catch(err => console.log(err))
+});
+
 module.exports = router;
