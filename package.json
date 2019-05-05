@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@google/maps": "^0.5.5",
+    "@google/markerclusterer": "^1.0.3",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "csv-parser": "^2.2.0",

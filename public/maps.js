@@ -8,13 +8,20 @@ function initMap() {
   $.ajax({
     url: "/api/food/",
     success: (data) => {
+      markers = []
       for(entry of data){
-        new google.maps.Marker({
+        if(entry.lat == null || entry.lon == null) {
+          continue
+        }
+        var marker = new google.maps.Marker({
           position: {lat: entry.lat, lng: entry.lon},
           map: map,
           title: entry.name
         })
+        markers.push(marker)
       }
+      var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
     }
   })
 
