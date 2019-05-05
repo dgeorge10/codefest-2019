@@ -3,18 +3,11 @@ const readline = require('readline');
 const {google} = require('googleapis');
 
 // If modifying these scopes, delete token.json.
-const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
+const SCOPES = ['https://www.googleapis.com/auth/calendar.events'];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
 const TOKEN_PATH = 'token.json';
-
-// Load client secrets from a local file.
-fs.readFile('credentials.json', (err, content) => {
-  if (err) return console.log('Error loading client secret file:', err);
-  // Authorize a client with credentials, then call the Google Calendar API.
-  authorize(JSON.parse(content), listEvents);
-});
 
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
@@ -72,6 +65,7 @@ function getAccessToken(oAuth2Client, callback) {
  */
 function listEvents(auth) {
   const calendar = google.calendar({version: 'v3', auth});
+  var eventsList = [];
   calendar.events.list({
     calendarId: 'primary',
     timeMin: (new Date()).toISOString(),
@@ -82,13 +76,65 @@ function listEvents(auth) {
     if (err) return console.log('The API returned an error: ' + err);
     const events = res.data.items;
     if (events.length) {
-      console.log('Upcoming 10 events:');
       events.map((event, i) => {
         const start = event.start.dateTime || event.start.date;
-        console.log(`${start} - ${event.summary}`);
+        eventsList.push(`${start} - ${event.summary}`);
       });
     } else {
       console.log('No upcoming events found.');
     }
   });
+  return eventsList;
 }
+
+function addEv(event) {
+
+      calendar.events.insert({
+        auth: auth,
+        calendarId: 'primary',
+        resource: event,
+      }, function(err, event) {
+        if (err) {
+          console.log('There was an error contacting the Calendar service: ' + err);
+          return;
+        }
+        console.log('Event created: %s', event.htmlLink);
+      });
+}
+
+  exports.addEvent = function(events) {
+
+      // Refer to the Node.js quickstart on how to setup the environment:
+// https://developers.google.com/calendar/quickstart/node
+// Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
+// stored credentials.
+
+    var event = {
+      'summary': 'Google I/O 2015',
+      'location': '800 Howard St., San Francisco, CA 94103',
+      'description': 'A chance to hear more about Google\'s developer products.',
+      'start': {
+        'dateTime': '2015-05-28T09:00:00-07:00',
+        'timeZone': 'America/Los_Angeles',
+      },
+      'end': {
+        'dateTime': '2015-05-28T17:00:00-07:00',
+        'timeZone': 'America/Los_Angeles',
+      },
+      'recurrence': [
+        'RRULE:FREQ=DAILY;COUNT=2'
+      ]
+    };
+
+    fs.readFile('credentials.json', (err, content) => {
+      if (err) return console.log('Error loading client secret file:', err);
+      var eventsList = authorize(JSON.parse(content), listEvents);
+
+      events.forEach(event => {
+      if (!eventsList.includes(event.start.dateTime + ' - ' + event.summary)) {
+        authorize(JSON.parse(content), addEv(event));
+      } 
+    });
+    });
+}
+
