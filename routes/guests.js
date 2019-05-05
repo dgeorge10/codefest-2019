@@ -30,7 +30,7 @@ router.delete("/remove", (req,res) => {
             number: number
         }
     })
-    .then(guest => res.send(guest))
+    .then(() => res.sendStatus(200))
     .catch(err => console.log(err))
 });
 

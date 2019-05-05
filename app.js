@@ -8,6 +8,7 @@ var session = require("express-session");
 
 const food = require("./models/Food");
 const shelter = require("./models/Shelter");
+const cal = require("./public/cal/cal");
 
 db.authenticate()
 	.then(() => console.log("Database connected"))
@@ -83,58 +84,13 @@ app.get("/allEvents", (req,res)=>{
 		response.push(foods)
 		shelter.findAll({raw:true})
 		.then(shelters => {
-			response.push(shelters)
-
-			let result = parseJSON(JSON.stringify(response));
-
+			response.push(shelters) 
+			let result = cal.parseJSON(JSON.stringify(response));
 			res.write(JSON.stringify(result));
 			res.end();
 		})
 	})
 	.catch(err => console.log(err))
-
-	function parseJSON(text) {
-		let food = [];
-		food = JSON.parse(text);
-		let allEvents = [];
-		for (obj in food) {
-			if (obj != null) {
-				allEvents.push.apply(allEvents, parseObjToEvent(food[obj]));
-			}
-		}
-		return allEvents;
-	}
-
-
-	function parseObjToEvent(obj) {
-		let days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
-		let events = [];
-		for (day in days) {
-			if (obj[days[day]] != "") {
-				let times = obj[days[day]].split("-");
-				let dow = [];
-				dow.push(parseInt(day));
-				let addy = obj["address"] + ", " + obj["city"] + ", " + obj["state"] + " " + obj["zip"];
-				let newEvent = createEvent(obj["name"], times[0], times[1], dow, addy);
-				events.push(newEvent);
-			}
-		}
-		return events;
-	}
-
-
-	function createEvent(title, start, end, daysOfWeek, content) {
-		var event = {
-			title: title,
-			start: start,
-			end: end,
-			dow: daysOfWeek,
-			description: content,
-			allDay: false
-		};
-		return event
-	}
-
 	
 });
 

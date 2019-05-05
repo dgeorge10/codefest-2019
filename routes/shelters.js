@@ -7,9 +7,15 @@ const path = require("path");
 const sequelize = require("sequelize")
 
 
-router.get("/", (req,res) => {
-    shelter.findAll()
-    .then(shelters => res.send(shelters))
+router.get("/getCurrentDay", (req,res) => {
+
+    var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    var d = new Date();
+    var day = days[d.getDay()];
+    db.query("SELECT name," + day + " from shelter.Shelters;")
+    .then(shelters => {
+        res.send(shelters)
+    })
     .catch(err => console.log(err))
 });
 
