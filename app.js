@@ -47,12 +47,21 @@ app.get("/index", (req,res)=>{
 	res.end();
 });
 app.get("/food", (req,res)=>{
-	res.write(fs.readFileSync(__dirname + "/public/input_food.html"));
-	res.end();
+	if(req.session.loggedin){
+		res.write(fs.readFileSync(__dirname + "/public/input_food.html"));
+		res.end();
+	} else {
+		res.send("screw you, login")
+	}
 });
 app.get("/shelter", (req,res)=>{
-	res.write(fs.readFileSync(__dirname + "/public/input_shelter.html"));
-	res.end();
+	if(req.session.loggedin){
+		res.write(fs.readFileSync(__dirname + "/public/input_shelter.html"));
+		res.end();
+	} else {
+		res.send("screw you, login")
+	}
+
 });
 
 

@@ -4,6 +4,7 @@ const db = require('../config/database');
 const path = require("path");
 const user = require("../models/User")
 const shelter = require("../models/Shelter")
+const bcrypt = require("bcrypt")
 
 router.get("/", (req,res) => {
     user.findAll()
@@ -25,12 +26,14 @@ router.post("/login", (req,res) => {
         })
         .then(user => {
             if(user) {
-                if(password == user.dataValues.password) {
+            bcrypt.compare(password, user.dataValues.password, (err, result)=>{  
+                if( result ) {
                     req.session.loggedin = true;
                     res.redirect("./dashboard")
                 } else {
                     res.send("error logging in")
                 }
+            })
             } else {
                 res.send("no user with that email")
             }
@@ -45,7 +48,7 @@ router.post("/register", (req,res) => {
     if (!username || !password) {
         res.sendStatus(400);
     } else {
-        let shelterId;
+        bcrypt.hash(password, 10/* salt */, (err, hash) =>{
         shelter.findOne({
             where: {
                 name: shelterName
@@ -54,7 +57,7 @@ router.post("/register", (req,res) => {
         .then(shelter => {
             const newUser = user.build({
                 username,
-                password,
+                password: hash,
                 shelterId: shelter.id
             })
             newUser.save()
@@ -64,7 +67,8 @@ router.post("/register", (req,res) => {
             })
             .catch((err) => console.log(err))
         })
-        .catch(err => console.log(err))
+            .catch(err => console.log(err))
+        })
     }
 })
 

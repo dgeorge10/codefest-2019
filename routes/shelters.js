@@ -11,18 +11,18 @@ router.get("/", (req,res) => {
 });
 
 router.post("/", (req,res) => {
-    let { shelterName, shelterAddress, shelterCity, shelterState, shelterZip, shelterAges, shelterBed, shelterType, shelterRegistration, mondayTimeIn, mondayTimeOut, tuesdayTimeIn, tuesdayTimeOut, wednesdayTimeIn, wednesdayTimeOut, thursdayTimeIn, thursdayTimeOut, fridayTimeIn, fridayTimeOut, saturdayTimeIn, saturdayTimeOut, sundayTimeIn } = req.body;
+    let { shelterName, shelterAddress, shelterCity, shelterState, shelterZip, shelterAges, shelterBed, shelterType, shelterRegistration, mondayTimeIn, mondayTimeOut, tuesdayTimeIn, tuesdayTimeOut, wednesdayTimeIn, wednesdayTimeOut, thursdayTimeIn, thursdayTimeOut, fridayTimeIn, fridayTimeOut, saturdayTimeIn, saturdayTimeOut, sundayTimeIn, sundayTimeOut } = req.body;
     console.log(req.body);
     if (!shelterName || !shelterAddress || !shelterCity || !shelterState || !shelterZip || !shelterAges || !shelterBed || !shelterType) {
         res.sendStatus(400);
     } else {
-        let mondayTime = mondayTimeIn+"-"+mondayTimeOut;
-        let tuesdayTime = tuesdayTimeIn+"-"+tuesdayTimeOut;
-        let wednesdayTime = wednesdayTimeIn+"-"+wednesdayTimeOut;
-        let thursdayTime = thursdayTimeIn+"-"+thursdayTimeOut;
-        let fridayTime = fridayTimeIn+"-"+fridayTimeOut;
-        let saturdayTime = saturdayTimeIn+"-"+saturdayTimeOut;
-        let sundayTime = sundayTimeIn+"-"+sundayTimeOut;
+        let mondayTime = concatTime(mondayTimeIn,mondayTimeOut);
+        let tuesdayTime = concatTime(tuesdayTimeIn,tuesdayTimeOut);
+        let wednesdayTime = concatTime(wednesdayTimeIn,wednesdayTimeOut);
+        let thursdayTime = concatTime(thursdayTimeIn,thursdayTimeOut);
+        let fridayTime = concatTime(fridayTimeIn,fridayTimeOut);
+        let saturdayTime = concatTime(saturdayTimeIn,saturdayTimeOut);
+        let sundayTime = concatTime(sundayTimeIn,sundayTimeOut);
         const newShelter = shelter.build({
             name:shelterName, address:shelterAddress, city:shelterCity, state:shelterState, zip:shelterZip, gender:shelterType, beds:shelterBed, ages_served:shelterAges, registration:shelterRegistration, mondayTime, tuesdayTime, wednesdayTime, thursdayTime, fridayTime, saturdayTime, sundayTime
         })
@@ -31,6 +31,14 @@ router.post("/", (req,res) => {
         .catch((err) => console.log(err))
     }
 });
+
+function concatTime(start, end){
+    if(!start && !end){
+        return start+"-"+end;
+    }else{
+        return ""
+    }
+}
 
 
 router.get("/:id", (req,res) => {
