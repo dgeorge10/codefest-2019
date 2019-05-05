@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
 const sequelize = require("sequelize")
-
+const path = require("path");
 const food = require("../models/Food")
 
 router.get("/getCurrentDay", (req,res) => {
