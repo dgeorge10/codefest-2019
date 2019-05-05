@@ -31,7 +31,7 @@ router.post("/", (req,res) => {
         })
         newShelter.save()
         .then(() => {
-            calendar.addEvent(newShelter);
+            calendar.addEvent(newShelter.dataValue.id, "shelter");
             res.sendFile(path.join(__dirname, "../public/cal/index.html"))
         })
         .catch((err) => console.log(err))
@@ -48,7 +48,6 @@ function concatTime(start, end){
 
 router.get("/:id", (req,res) => {
     let { id } = req.params;
-    
     shelter.findOne({
         where:{
             id

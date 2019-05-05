@@ -27,7 +27,9 @@ router.post("/", (req,res) => {
             name:foodName, address:foodAddress, city:foodCity, state:foodState, zip:foodZip, snap:foodSnap, fmnp:foodFMNP, mondayTime, tuesdayTime, wednesdayTime, thursdayTime, fridayTime, saturdayTime, sundayTime
         })
         newfood.save()
-        .then(() => res.send("food saved"))
+        .then(() => {
+            calendar.addEvent(newShelter.dataValue.id, "food");
+        })
         .catch((err) => console.log(err))
     }
 });

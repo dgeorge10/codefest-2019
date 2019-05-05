@@ -7,7 +7,7 @@ var session = require("express-session");
 
 db.authenticate()
 	.then(() => console.log("Database connected"))
-	.catch(err => console.log(err))
+	.catch(err => process.exit())
 
 const app = express()
 
