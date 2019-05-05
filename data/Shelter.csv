@@ -1,15 +1,15 @@
-﻿NAME,ADDRESS,CITY,STATE,ZIP,GENDER,DAY,TIME IN,TIME OUT,BEDS,AGES_SERVED,REGISTRATION
-Apple Tree Family Center,1430 Cherry St,Philadelphia,PA,19102,Family/Women,MTWRF,7am,5pm,,All,WALKIN
-Red Shield Family Residence,715 N Broad St,Philadelphia,PA,19123,Family,MTWRFSU,5pm,8am,,All,WALKIN
-"House of Passage, Kirkbride Center",111 N 49th St,Philadelphia,PA,19139,Women,MTWRFSU,5pm,8am,,18+,WALKIN
-The Roosevelt Darby Center,802 N Broad St,Philadelphia,PA,19130,Men ,MTWRF,7am,5pm,,18+,WALKIN
-Station House,2601 N Broad St,Philadelphia,PA,19132,Men ,MTWRFSU,5pm,8am,,18+,WALKIN
-Sunday Breakfast Rescue Mission,302 N 13th St,Philadelphia,PA,19107,Men ,MTWRFSU,5pm,8am,,18+,WALKIN
-Welcome Center Lutheran Church of the Holy Communion,2111 Sansom St,Philadelphia,PA,19103,Family/Men/Women,TF,12pm,4pm,,All,WALKIN
-Philadelphia Recovery Community Center (PRCC),1701 W Lehigh Ave,Philadelphia,PA,19132,Family/Men/Women,MTRF,12pm,8pm,,All,WALKIN
-A New Life Recovery & Education Center,3119 Spring Garden St,Philadelphia,PA,19104,Family/Men/Women,TWRFS,10am,6pm,,All,WALKIN
-The Well,"2709 N. Broad Street, 1st floor",Philadelphia,PA,19132,Family/Men/Women,MTWRF,9am,5pm,,All,WALKIN
-St. John's Hospice,1221 Race St,Philadelphia,PA,19107,Men,MTW,9pm,7am,,18+,WALKIN
-Mercy Hospice,334 S 13th St,Philadelphia,PA,19108,Women,MTWRFSU,5pm,8am,,18+,WALKIN
-The Perimeter (Veteran Services),213-217 N 4th St,Philadelphia,PA,19106,Men/Women,MF,8am,4pm,,18+,WALKIN
-Salavation Army Red Shield Family Residence,15 N. Broad Street,Philadelphia,PA,19123,Families,MTWRFSU,5pm,8am,,All,WALKIN
+id,name,address,city,state,zip,gender,monday,tuesday,wednesday,thursday,firday,saturday,sunday,beds,ages_served,registration,lat,lon
+1,"House of Passage Kirkbride Center",111 N 49th St,Philadelphia,PA,19139,Women,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,,18+,WALKIN,39.9617037,-75.2184789
+2,St. John's Hospice,1221 Race St,Philadelphia,PA,19107,Men,21:00-7:00,21:00-7:00,21:00-7:00,,,,,,18+,WALKIN,39.9561156,-75.159942
+3,Apple Tree Family Center,1430 Cherry St,Philadelphia,PA,19102,Family/Women,7:00-17:00,7:00-17:00,7:00-17:00,7:00-17:00,7:00-17:00,,,,All,WALKIN,39.9553612,-75.1642513
+4,Salavation Army Red Shield Family Residence,15 N. Broad Street,Philadelphia,PA,19123,Filies,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,,All,WALKIN,39.9670886,-75.1591293
+5,Philadelphia Recovery Community Center (PRCC),1701 W Lehigh Ave,Philadelphia,PA,19132,Family/Men/Women,12:00-20:00,12:00-20:00,,12:00-20:00,12:00-20:00,,,,All,WALKIN,39.9948436,-75.1600547
+6,Welcome Center Lutheran Church of the Holy Communion,2111 Sansom St,Philadelphia,PA,19103,Family/Men/Women,,12:00-16:00,,,12:00-16:00,,,,All,WALKIN,39.9517253,-75.176107
+7,The Perimeter (Veteran Services),213-217 N 4th St,Philadelphia,PA,19106,Men/Women,8:00-16:00,,,,8:00-16:00,,,,18+,WALKIN,39.9546512,-75.1461131
+8,Station House,2601 N Broad St,Philadelphia,PA,19132,Men ,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,,18+,WALKIN,39.9923482,-75.1544469
+9,The Well,"2709 N. Broad Street 1st floor",Philadelphia,PA,19132,Family/Men/Women,9:00-5:00,9:00-5:00,9:00-5:00,9:00-5:00,9:00-5:00,,,,All,WALKIN,39.9943627,-75.1537402
+10,Sunday Breakfast Rescue Mission,302 N 13th St,Philadelphia,PA,19107,Men ,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,,18+,WALKIN,39.958175,-75.160376
+11,A New Life Recovery & Education Center,3119 Spring Garden St,Philadelphia,PA,19104,Family/Men/Women,,10:00-18:00,10:00-18:00,10:00-18:00,10:00-18:00,10:00-18:00,,,All,WALKIN,39.9635358,-75.1884178
+12,Mercy Hospice,334 S 13th St,Philadelphia,PA,19108,Women,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,,18+,WALKIN,39.945628,-75.1630657
+13,Red Shield Family Residence,715 N Broad St,Philadelphia,PA,19123,Family,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,17:00-8:00,,All,WALKIN,39.9676669,-75.1598736
+14,The Roosevelt Darby Center,802 N Broad St,Philadelphia,PA,19130,Men ,7:00-17:00,7:00-17:00,7:00-17:00,7:00-17:00,7:00-17:00,,,,18+,WALKIN,39.9682164,-75.160626

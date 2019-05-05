@@ -12,15 +12,15 @@ router.get("/", (req,res) => {
     .catch(err => console.log(err))
 });
 
-router.get("/:number", (req,res) => {
-    guest.findAll({
-        where: {
-            number: req.params["number"]
-        }
-    })
-    .then(guest => res.send(guest))
-    .catch(err => console.log(err))
-});
+// router.get("/:number", (req,res) => {
+//     guest.findAll({
+//         where: {
+//             number: req.params["number"]
+//         }
+//     })
+//     .then(guest => res.send(guest))
+//     .catch(err => console.log(err))
+// });
 
 router.get("/men", (req,res) => {
     guest.findAll({
@@ -70,7 +70,6 @@ router.post("/", (req,res) => {
         .then(() => res.send("guest saved"))
         .catch((err) => console.log(err))
     }
-
 
 })
 
