@@ -4,9 +4,14 @@ const db = require('../config/database');
 
 const food = require("../models/Food")
 
-router.get("/", (req,res) => {
-    food.findAll()
-    .then(food => res.send(food))
+router.get("/getCurrentDay", (req,res) => {
+    var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    var d = new Date();
+    var day = days[d.getDay()];
+    db.query("SELECT name," + day + " from shelter.Food;")
+    .then(food => {
+        res.send(food)
+    })
     .catch(err => console.log(err))
 });
 
