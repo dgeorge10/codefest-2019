@@ -41,7 +41,7 @@ function concatTime(start, end){
 
 router.get("/:id", (req,res) => {
     let { id } = req.params;
-    
+
     food.findOne({
         where:{
             id
