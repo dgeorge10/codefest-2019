@@ -35,7 +35,7 @@ router.post("/", (req,res) => {
     }
 });
 function concatTime(start, end){
-    if(!start && !end){
+    if(start!="" && end!=""){
         return start+"-"+end;
     } else {
         return ""
