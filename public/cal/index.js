@@ -91,7 +91,7 @@ function addEv(event) {
 
       calendar.events.insert({
         auth: auth,
-        calendarId: 'primary',
+        calendarId: event.summary,
         resource: event,
       }, function(err, event) {
         if (err) {
@@ -102,29 +102,9 @@ function addEv(event) {
       });
 }
 
-  exports.addEvent = function(events) {
+  exports.addEvent = function(dbEntry) {
 
-      // Refer to the Node.js quickstart on how to setup the environment:
-// https://developers.google.com/calendar/quickstart/node
-// Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
-// stored credentials.
-
-    var event = {
-      'summary': 'Google I/O 2015',
-      'location': '800 Howard St., San Francisco, CA 94103',
-      'description': 'A chance to hear more about Google\'s developer products.',
-      'start': {
-        'dateTime': '2015-05-28T09:00:00-07:00',
-        'timeZone': 'America/Los_Angeles',
-      },
-      'end': {
-        'dateTime': '2015-05-28T17:00:00-07:00',
-        'timeZone': 'America/Los_Angeles',
-      },
-      'recurrence': [
-        'RRULE:FREQ=DAILY;COUNT=2'
-      ]
-    };
+    var events = parseDbEvent(dbEntry);
 
     fs.readFile('credentials.json', (err, content) => {
       if (err) return console.log('Error loading client secret file:', err);
@@ -136,5 +116,106 @@ function addEv(event) {
       } 
     });
     });
+}
+
+function parseDbEvent(dbEntry) {
+
+	let allEvents = [];
+
+	let days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+	let calCategory = "";
+
+	for (day in days) {
+		if (days[day] in dbEntry) {
+			console.log("day");
+			let res = parseDay(dbEntry, days[day]);
+			var event = {
+		      'summary': getType(dbEntry),
+		      'location': dbEntry.address + " " + dbEntry.city + " " + dbEntry.state + " " + dbEntry.zip,
+		      'description': dbEntry.name,
+		      'start': {
+		        'dateTime': res[0],
+		        'timeZone': 'America/New_York',
+		      },
+		      'end': {
+		        'dateTime': res[1],
+		        'timeZone': 'America/New_York',
+		      },
+		      'recurrence': [
+		        'RRULE:FREQ=DAILY;COUNT=2'
+		      ]
+		    };
+			allEvents.push(event)
+		}
+	}
+	return allEvents;
+
+}
+
+
+function parseDay(dbEntry, day) {
+	let daytime = "";
+	let res = [];
+	switch(day) {
+		case "monday":
+			daytime = "2019-04-29T";
+			break;
+		case "tuesday":
+			daytime = "2019-04-30T";
+			break;
+		case "wednesday":
+			daytime = "2019-05-01T";
+			break;
+		case "thursday":
+			daytime = "2019-05-02T";
+			break;
+		case "friday":
+			daytime = "2019-05-03T";
+			break;
+		case "saturday":
+			daytime = "2019-05-04T";
+			break;
+		case "sunday":
+			daytime = "2019-05-05";
+			break;
+	}
+
+	res[0] = daytime;
+	res[1] = daytime;
+
+	if (dbEntry[day] != "") {
+		let times = dbEntry[day].split("-");
+		res[0] += ":" + times[0];
+		if (parseInt(times[0].split(":")[0]) > parseInt(times[1].split(":")[0])) {
+			res[1] += "-23:59";
+		} else {
+			res[1] += "-" + times[1];
+		}
+	}
+	return res;
+}
+
+function getType(dbEntry) {
+	if ("gender" in dbEntry) {
+		if (dbEntry["gender"].toLowerCase().includes("family")) {
+			return "iqjog2vhjr0tj6lmtag815ah74@group.calendar.google.com";
+		} else if (dbEntry["gender"].toLowerCase().includes("women")) {
+			return "vjbftfnm7j3gma0shlbtntr00s@group.calendar.google.com";
+		} else if (dbEntry["gender"].toLowerCase().includes("men")) {
+			return "nagi7us980ngqo735vj372bqro@group.calendar.google.com";
+		} else {
+			return "shelter";
+		}
+	} else {
+		if (dbEntry["snap"].toLowerCase() == "yes") {
+			return "oetdrbs4o04gcv384p2bir5d7s@group.calendar.google.com";
+		} else if (dbEntry["fmnp"].toLowerCase() == "yes") {
+			return "nkcdn48ouljuscfc2euve49lls@group.calendar.google.com";
+		} else if (dbEntry["bucks"].toLowerCase() == "yes") {
+			return "1t01j56s9v42cscl0jdneikdis@group.calendar.google.com";
+		} else {
+			return "food";
+		}
+	}
 }
 
