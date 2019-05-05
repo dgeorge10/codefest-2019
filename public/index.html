@@ -42,13 +42,13 @@
 						</div>
 					</nav>
 			
-				<div class="contiainer">
+				<div class="contiainer-fluid">
 					<div class="row">
 						<div class="col-md-6">
 							<div id="map"></div>
 						</div>
-						<div class="col-md-6">
-							
+						<div class="col-md-6 vert">
+							<div>
 							<div class="text-message">
 								<h4>TEXT YOUR GENDER AND NUMBER OF DEPENDENTS</h4>
 								<h2>TO <b>(215) 821-6634</b> FOR NOTIFICATIONS</h2>
@@ -56,6 +56,7 @@
 							<div class="message-info">
 								<p>Sign up to recieve daily notifications about <br>
 									shelter availability & food bank resource</p>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -68,9 +69,19 @@
 			</script>
 
 			<style>
+				.vert {
+					display: flex;
+					align-items: center;
+				}
+
+				.row {
+					height: calc(100% - 70px);
+					width: 100%;
+				}
+
 				.text-message {
 					text-align: center;
-					margin-top: 80px;
+					
 				}
 
 				.message-info {

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
+const sequelize = require("sequelize")
 
 const food = require("../models/Food")
 
@@ -8,12 +9,18 @@ router.get("/getCurrentDay", (req,res) => {
     var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
     var d = new Date();
     var day = days[d.getDay()];
-    db.query("SELECT name," + day + " from shelter.Food;")
+    db.query("SELECT name,address," + day + " from shelter.Food where (" + day + "!= '')", { type: sequelize.QueryTypes.SELECT })
     .then(food => {
         res.send(food)
     })
     .catch(err => console.log(err))
 });
+
+router.get("/all", (req,res) => {
+    food.findAll({})
+    .then(food => res.send(food))
+    .catch(err => console.log(err))
+})
 
 router.post("/", (req,res) => {
     let { foodName, foodAddress, foodCity, foodState, foodZip, foodSnap, foodBucks, foodFMNP, mondayTimeIn, mondayTimeOut, tuesdayTimeIn, tuesdayTimeOut, wednesdayTimeIn, wednesdayTimeOut, thursdayTimeIn, thursdayTimeOut, fridayTimeIn, fridayTimeOut, saturdayTimeIn, saturdayTimeOut, sundayTimeIn, sundayTimeOut } = req.body;

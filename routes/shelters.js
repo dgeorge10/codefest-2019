@@ -8,16 +8,22 @@ const sequelize = require("sequelize")
 
 
 router.get("/getCurrentDay", (req,res) => {
-
     var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
     var d = new Date();
     var day = days[d.getDay()];
-    db.query("SELECT name," + day + " from shelter.Shelters;")
-    .then(shelters => {
+    db.query("SELECT name,address," + day + " from shelter.Shelters where (" + day + "!='')", { type: sequelize.QueryTypes.SELECT })
+    .then((shelters) => {
+        console.log(shelters)
         res.send(shelters)
     })
     .catch(err => console.log(err))
 });
+
+router.get("/all", (req,res) => {
+    shelter.findAll({})
+    .then(food => res.send(food))
+    .catch(err => console.log(err))
+})
 
 router.post("/", (req,res) => {
     let { shelterName, shelterAddress, shelterCity, shelterState, shelterZip, shelterAges, shelterBed, shelterType, shelterRegistration, mondayTimeIn, mondayTimeOut, tuesdayTimeIn, tuesdayTimeOut, wednesdayTimeIn, wednesdayTimeOut, thursdayTimeIn, thursdayTimeOut, fridayTimeIn, fridayTimeOut, saturdayTimeIn, saturdayTimeOut, sundayTimeIn, sundayTimeOut } = req.body;
