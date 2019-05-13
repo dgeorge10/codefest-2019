@@ -4,7 +4,9 @@ const path = require("path");
 const fs = require("fs")
 const bodyParser = require("body-parser");
 var session = require("express-session");
+var sequelize = require('sequelize');
 
+const Op = sequelize.Op;
 
 const food = require("./models/Food");
 const shelter = require("./models/Shelter");
@@ -91,6 +93,100 @@ app.get("/allEvents", (req,res)=>{
 	.catch(err => console.log(err))
 	
 });
+
+app.get("/calEvents", (req,res)=>{
+	let { genderVal } = req.query;
+	console.log(genderVal);
+
+	switch (genderVal) {
+		case "male":
+			genderVal = "M";
+		case "female":
+			genderVal = "W";
+		case "family":
+			genderVal = "F";
+	}
+
+	let response = [];
+	if (genderVal == "allShelter") {
+		shelter.findAll({raw:true})
+		.then(shelters => {
+			response.push(shelters);
+			let result = cal.parseJSON(JSON.stringify(response));
+			res.write(JSON.stringify(result));
+			res.end();
+		})
+		.catch(function(error){
+			console.log(error);
+		});
+	} else if (genderVal == "M" || genderVal == "F" || genderVal == "W") {
+		shelter.findAll({
+			where: {
+				gender: {
+					[Op.substring]: [genderVal]
+				}
+			}
+		}).then(shelters => {
+			response.push(shelters);
+			let result = cal.parseJSON(JSON.stringify(response));
+			res.write(JSON.stringify(result));
+			res.end();
+		}).catch(function(error){
+			console.log(error);
+		});
+	} else if (genderVal == "allFood") {
+		food.findAll({raw:true})
+		.then(shelters => {
+			response.push(shelters);
+			let result = cal.parseJSON(JSON.stringify(response));
+			res.write(JSON.stringify(result));
+			res.end();
+		})
+		.catch(function(error){
+			console.log(error);
+		});
+	} else if (genderVal == "fmnp") {
+		food.findAll({
+			where: {
+				fmnp: "Yes"
+			}
+		}).then(shelters => {
+			response.push(shelters);
+			let result = cal.parseJSON(JSON.stringify(response));
+			res.write(JSON.stringify(result));
+			res.end();
+		}).catch(function(error){
+			console.log(error);
+		});
+	} else if (genderVal == "bucks") {
+		food.findAll({
+			where: {
+				bucks: "Yes"
+			}
+		}).then(shelters => {
+			response.push(shelters);
+			let result = cal.parseJSON(JSON.stringify(response));
+			res.write(JSON.stringify(result));
+			res.end();
+		}).catch(function(error){
+			console.log(error);
+		});
+	} else if (genderVal == "snap") {
+		food.findAll({
+			where: {
+				snap: "Yes"
+			}
+		}).then(shelters => {
+			response.push(shelters);
+			let result = cal.parseJSON(JSON.stringify(response));
+			res.write(JSON.stringify(result));
+			res.end();
+		}).catch(function(error){
+			console.log(error);
+		});
+	}
+});
+
 
 //routes
 app.use("/api/shelters", require("./routes/shelters"));
