@@ -1,4 +1,4 @@
-
+// require('dotenv').config();
 const Sequelize = require('sequelize');
 module.exports = new Sequelize('shelter', 'root', 'phillycode1', {
 	host:'35.193.34.182',
